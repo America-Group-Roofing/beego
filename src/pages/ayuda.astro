@@ -1,11 +1,33 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const questions=[
+  {title:"¿Qué es BeeGo?",answer:"BeeGo es energía portátil compartida: una forma práctica de llevar una batería contigo mientras continúas tus actividades."},
+  {title:"¿Cómo funciona?",answer:"El recorrido consiste en encontrar una estación, consultar las condiciones, retirar una batería, usarla y confirmar su devolución."},
+  {title:"¿Dónde encuentro una estación?",answer:"En la sección Estaciones encontrarás las ubicaciones publicadas y la información disponible de cada punto. Si todavía no aparece una ubicación en tu zona, revisa más adelante."},
+  {title:"¿Dónde puedo consultar el costo?",answer:"Consulta la tarifa, los posibles cargos y las condiciones de renta antes de autorizar cualquier pago en un punto de servicio habilitado."},
+  {title:"¿Cómo confirmo una devolución?",answer:"La devolución debe quedar registrada por el sistema correspondiente. Colocar la batería en la estación no sustituye la confirmación de finalización."}
+];
 ---
-<BaseLayout title="Ayuda" description="Información inicial y ayuda sobre el proyecto BeeGo.">
+<BaseLayout title="Ayuda y preguntas frecuentes" description="Resuelve tus dudas sobre BeeGo, las estaciones, el uso de baterías portátiles y la devolución.">
   <section class="page-heading container">
-    <p class="eyebrow">CENTRO DE AYUDA · PREPARACIÓN</p>
+    <p class="eyebrow">AYUDA BEEGO</p>
     <h1>¿En qué podemos ayudarte?</h1>
-    <p class="lead">BeeGo está preparando sus canales de atención y procedimientos para el piloto de operación.</p>
-    <p class="notice">Aún no existe una renta activa a través de este sitio. No se muestran números de soporte u horarios que no hayan sido confirmados para atención pública.</p>
+    <p class="lead">Encuentra respuestas claras sobre las estaciones BeeGo y cómo llevar energía portátil contigo.</p>
+    <div class="actions">
+      <a class="button button--dark" href="/como-funciona/">Cómo funciona</a>
+      <a class="button button--dark" href="/estaciones/">Consultar estaciones</a>
+    </div>
+  </section>
+  <section class="section section--soft" aria-labelledby="preguntas">
+    <div class="container">
+      <p class="eyebrow">INFORMACIÓN ÚTIL</p>
+      <h2 id="preguntas">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        {questions.map(q=><details class="faq-item">
+          <summary>{q.title}</summary>
+          <p>{q.answer}</p>
+        </details>)}
+      </div>
+    </div>
   </section>
 </BaseLayout>

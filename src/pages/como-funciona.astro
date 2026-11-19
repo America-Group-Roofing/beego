@@ -1,21 +1,37 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const steps=[
-["01","Encuentra una estación","Consulta las ubicaciones verificadas cuando estén habilitadas.","beego-il-encontrar-conceptual.webp"],
-["02","Escanea y consulta","Accede al proceso de renta y revisa tarifas y condiciones antes de aceptar.",null],
-["03","Autoriza y retira","Completa la autorización aplicable y confirma la entrega.","beego-il-retirar-conceptual.webp"],
-["04","Utiliza tu batería","Continúa tus actividades con una conexión compatible.","beego-hero.webp"],
-["05","Devuelve y finaliza","Entrega la batería y verifica que la devolución quede registrada.","beego-il-devolver-conceptual.webp"]
+  ["01","Encuentra una estación","Busca una ubicación BeeGo y consulta las indicaciones de acceso.","beego-il-encontrar-conceptual.webp"],
+  ["02","Escanea y consulta","Revisa la información de la estación, el precio y las condiciones antes de continuar.",null],
+  ["03","Autoriza y retira","Sigue las instrucciones para autorizar la renta y retirar la batería.","beego-il-retirar-conceptual.webp"],
+  ["04","Lleva energía contigo","Conecta tu dispositivo compatible y continúa disfrutando de tu día.","beego-hero.webp"],
+  ["05","Devuelve y confirma","Regresa la batería a una estación habilitada y verifica que la devolución quede registrada.","beego-il-devolver-conceptual.webp"]
 ];
 ---
-<BaseLayout title="Cómo funciona" description="Cinco etapas previstas de la experiencia BeeGo: encontrar, consultar, retirar, utilizar y devolver.">
-  <section class="page-heading container"><p class="eyebrow">EL SERVICIO EN DESARROLLO</p><h1>Cómo funciona BeeGo</h1><p class="lead">Con BeeGo puedes llevar una batería portátil mientras continúas tus actividades.</p><p class="notice">Este recorrido es conceptual. Pagos, tarifas, retiro y devoluciones requieren validación del sistema operativo.</p></section>
-  <section class="section section--soft"><div class="container">
-    <img class="section-stripes" src="/assets/beego-franjas-negro.svg" width="400" height="48" alt="" aria-hidden="true" loading="lazy"/>
-    <div class="how-steps">
-    {steps.map(([num,title,desc,img])=><article class="how-step">
-      <div><span class="how-step__number">{num}</span><h2>{title}</h2><p>{desc}</p></div>
-      {img?<figure><img src={"/assets/"+img} alt={img==="beego-il-encontrar-conceptual.webp"?"Persona consultando un mapa ilustrativo BeeGo con una estación conceptual; ubicaciones ficticias, no disponibilidad real.":"Ilustración conceptual del paso "+title+"; no corresponde a una operación real acreditada."} width={img==="beego-hero.webp"?1050:1000} height={img==="beego-hero.webp"?1341:img==="beego-il-retirar-conceptual.webp"||img==="beego-il-encontrar-conceptual.webp"?750:752} loading="lazy" decoding="async"/><figcaption>Representación conceptual; no indica estación operativa.</figcaption></figure>:<div class="how-step__abstract" aria-hidden="true">{num}</div>}
-    </article>)}
-  </div></div></section>
+<BaseLayout title="Cómo funciona" description="Descubre cómo encontrar, retirar, utilizar y devolver una batería portátil BeeGo.">
+  <section class="page-heading container">
+    <p class="eyebrow">ASÍ FUNCIONA BEEGO</p>
+    <h1>Energía portátil en cinco pasos.</h1>
+    <p class="lead">Conoce el recorrido para llevar energía contigo sin detener tus actividades.</p>
+  </section>
+  <section class="section section--soft">
+    <div class="container">
+      <img class="section-stripes" src="/assets/beego-franjas-negro.svg" width="400" height="48" alt="" aria-hidden="true" loading="lazy"/>
+      <div class="how-steps">
+        {steps.map(([num,title,desc,img])=><article class="how-step">
+          <div><span class="how-step__number">{num}</span><h2>{title}</h2><p>{desc}</p></div>
+          {img?<figure>
+            <img src={"/assets/"+img} alt={img==="beego-il-encontrar-conceptual.webp"?"Ilustración de búsqueda de una estación desde un teléfono móvil.":"Ilustración del paso "+title+" de BeeGo."} width={img==="beego-hero.webp"?1050:1000} height={img==="beego-hero.webp"?1341:img==="beego-il-retirar-conceptual.webp"||img==="beego-il-encontrar-conceptual.webp"?750:752} loading="lazy" decoding="async"/>
+            {img!=="beego-hero.webp"&&<figcaption>Imagen ilustrativa.</figcaption>}
+          </figure>:<div class="how-step__abstract" aria-hidden="true">{num}</div>}
+        </article>)}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container split-section">
+      <div><p class="eyebrow">ANTES DE COMENZAR</p><h2>Información clara en cada paso.</h2></div>
+      <div><p>Antes de autorizar una renta, consulta la tarifa, los posibles cargos, el tiempo de uso y las condiciones de devolución.</p><a class="text-link" href="/ayuda/">Ver preguntas frecuentes <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
 </BaseLayout>

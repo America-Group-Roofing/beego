@@ -1,12 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Estaciones" description="Información sobre el desarrollo de la futura red de estaciones BeeGo en Tijuana.">
+<BaseLayout title="Encuentra BeeGo" description="Consulta la red de estaciones BeeGo y descubre cómo encontrar energía portátil en Tijuana.">
   <section class="page-heading container">
-    <p class="eyebrow">RED BEEGO · ESTADO ACTUAL</p>
-    <h1>Estamos desarrollando nuestra red de estaciones en Tijuana.</h1>
-    <p class="lead">La disponibilidad, las ubicaciones y las condiciones de acceso se publicarán únicamente después de verificar las instalaciones.</p>
-    <p class="notice">No hay mapa operativo, ubicaciones públicas verificadas ni reservas habilitadas en esta versión.</p>
-    <a class="button button--dark" href="/negocios/">¿Tienes un establecimiento?</a>
+    <p class="eyebrow">ESTACIONES BEEGO</p>
+    <h1>Encuentra energía para seguir tu camino.</h1>
+    <p class="lead">Consulta los puntos BeeGo y conoce las ubicaciones disponibles en tu zona.</p>
+  </section>
+  <section class="section section--soft" aria-labelledby="estado-estaciones">
+    <div class="container empty-state">
+      <p class="eyebrow">TIJUANA</p>
+      <h2 id="estado-estaciones">Aún no hay estaciones disponibles para mostrar.</h2>
+      <p>Cuando se habiliten puntos BeeGo en esta zona, encontrarás aquí sus ubicaciones y detalles de acceso.</p>
+      <a class="button button--dark" href="/como-funciona/">Descubre cómo funciona BeeGo</a>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="sumate">
+    <div class="container split-section">
+      <div><p class="eyebrow">BEEGO PARA NEGOCIOS</p><h2 id="sumate">BeeGo también puede llegar a tu establecimiento.</h2></div>
+      <div><p>Conoce cómo incorporar energía portátil compartida como una amenidad para tus visitantes.</p><a class="text-link" href="/negocios/">Explorar BeeGo para negocios <span aria-hidden="true">↗</span></a></div>
+    </div>
   </section>
 </BaseLayout>
