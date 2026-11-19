@@ -1,0 +1,20 @@
+---
+const links = [
+  { href: "/", label: "Inicio" },
+  { href: "/como-funciona/", label: "Cómo funciona" },
+  { href: "/estaciones/", label: "Estaciones" },
+  { href: "/negocios/", label: "Para negocios" },
+  { href: "/ayuda/", label: "Ayuda" },
+];
+---
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand-placeholder" href="/" aria-label="BeeGo — ir al inicio">
+      <span class="brand-placeholder__name">BeeGo</span>
+      <span class="brand-placeholder__tag">Entorno de pruebas</span>
+    </a>
+    <nav aria-label="Navegación principal" class="primary-nav">
+      {links.map((link) => <a href={link.href} aria-current={Astro.url.pathname === link.href ? "page" : undefined}>{link.label}</a>)}
+    </nav>
+  </div>
+</header>

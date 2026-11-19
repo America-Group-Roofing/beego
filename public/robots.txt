@@ -1,0 +1,3 @@
+# Entorno de desarrollo; nunca copiar este archivo sin revisión a producción.
+User-agent: *
+Disallow: /

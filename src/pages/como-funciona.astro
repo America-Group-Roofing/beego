@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const steps = [
+  ["Encuentra una estación", "Consulta las ubicaciones verificadas cuando estén habilitadas."],
+  ["Escanea y consulta", "Accede al proceso de renta y conoce las condiciones antes de aceptar."],
+  ["Autoriza y retira", "Completa la autorización aplicable y confirma la entrega de la batería."],
+  ["Utiliza tu batería", "Continúa tus actividades con una conexión compatible."],
+  ["Devuelve y finaliza", "Deposita el equipo en un punto compatible y verifica que la devolución se registre."],
+];
+---
+<BaseLayout title="Cómo funciona" description="Conoce el funcionamiento previsto del servicio de energía portátil compartida BeeGo.">
+  <section class="page-heading container">
+    <p class="eyebrow">EL RECORRIDO PREVISTO</p>
+    <h1>Cómo funciona BeeGo</h1>
+    <p class="lead">Con BeeGo puedes llevar una batería portátil mientras continúas tus actividades.</p>
+    <p class="notice">Esta explicación representa el servicio objetivo y está sujeta a validación del hardware, métodos de pago, tarifas y compatibilidad de devoluciones.</p>
+  </section>
+  <section class="section section--soft">
+    <div class="container list-steps">
+      {steps.map(([heading, description], i) => (
+        <article class="step-row"><span class="step-number">{String(i + 1).padStart(2, "0")}</span><div><h2>{heading}</h2><p>{description}</p></div></article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
