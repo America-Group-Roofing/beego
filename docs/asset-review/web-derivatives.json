@@ -1,0 +1,95 @@
+{
+  "note": "Derivados de staging, no archivos maestros; se han excluido IL01 y el reverso con certificaciones no verificadas.",
+  "files": [
+    {
+      "source": "assets/Batería portátil BeeGo amarilla.png",
+      "output": "public/assets/beego-hero.webp",
+      "width": 1050,
+      "height": 1341,
+      "bytes": 81696,
+      "sha256": "f16feb30e0182540d70851ba8901ac9e4a3b2cddb483e07878e8eddaeb10cff0",
+      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+    },
+    {
+      "source": "assets/Power Bank Amarillo BeeGo.png",
+      "output": "public/assets/beego-producto-frontal.webp",
+      "width": 740,
+      "height": 1477,
+      "bytes": 95942,
+      "sha256": "a89f9402b99b40a34f9643cf6f6947cada1ea6976ebad106687fa19e13274f4c",
+      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+    },
+    {
+      "source": "assets/BeeGo_PB05_Lateral_USB_C_Transparente.png",
+      "output": "public/assets/beego-producto-lateral-usbc.webp",
+      "width": 204,
+      "height": 1250,
+      "bytes": 14002,
+      "sha256": "a8e290305b8d1edcd5e5f20b79899d8d4673285611a5edd0abaf0c87a6ccd2a6",
+      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+    },
+    {
+      "source": "assets/Dispositivo amarillo minimalista en perfil.png",
+      "output": "public/assets/beego-producto-lateral-boton.webp",
+      "width": 380,
+      "height": 760,
+      "bytes": 14190,
+      "sha256": "0ee31a1d182b943f9d227761c2fc59de903a48693acd5814f58b2d85be34fcb1",
+      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+    },
+    {
+      "source": "assets/BeeGo_PB06_Contactos_Inferiores_Transparente.png",
+      "output": "public/assets/beego-producto-contactos.webp",
+      "width": 1250,
+      "height": 342,
+      "bytes": 24670,
+      "sha256": "42722607561d4d2d58db6d9ac3bfd694557d51585c5dc3003e1add20c765b782",
+      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+    },
+    {
+      "source": "assets/BeeGo_IL02_Retirar_Bateria_Web.webp",
+      "output": "public/assets/beego-il-retirar-conceptual.webp",
+      "width": 1000,
+      "height": 750,
+      "bytes": 94774,
+      "sha256": "00ce2f8614286d223b0bca4d5799594853da1098e81e91e00a3c38667e30107e",
+      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+    },
+    {
+      "source": "assets/Mujer devolviendo batería BeeGo.png",
+      "output": "public/assets/beego-il-devolver-conceptual.webp",
+      "width": 1000,
+      "height": 752,
+      "bytes": 119484,
+      "sha256": "89583597f179cedf1407cfe4f148d5932910c7b36e90a474715d55e62e1e829b",
+      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+    },
+    {
+      "source": "assets/BeeGo_OG01_Inicio_1200x630.png",
+      "output": "public/assets/beego-og-inicio.png",
+      "width": 1200,
+      "height": 630,
+      "bytes": 290030,
+      "sha256": "b3ebb7f8467a9980da685a8d4cb46640113130063e64726149f61035d54a6628",
+      "status": "vista previa de entorno preoperativo"
+    },
+    {
+      "source": "assets/BG05_franjas_dobles_amarillo.svg",
+      "output": "public/assets/beego-franjas-amarillo.svg",
+      "bytes": 294,
+      "status": "decorativo; no confundir con el archivo vectorial oficial del logotipo"
+    },
+    {
+      "source": "assets/BG05_franjas_dobles_blanco.svg",
+      "output": "public/assets/beego-franjas-blanco.svg",
+      "bytes": 294,
+      "status": "decorativo; no confundir con el archivo vectorial oficial del logotipo"
+    },
+    {
+      "source": "assets/BG05_franjas_dobles_negro.svg",
+      "output": "public/assets/beego-franjas-negro.svg",
+      "bytes": 294,
+      "status": "decorativo; no confundir con el archivo vectorial oficial del logotipo"
+    }
+  ]
+}
