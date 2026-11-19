@@ -1,45 +1,48 @@
 # BeeGo · Estado y publicación
 
-## Alcance de esta rama
+**Actualizado:** 19 de noviembre de 2026.
 
-La rama \`develop\` contiene una base inicial de Astro y páginas de contenido **preoperativo**. La rama \`main\` sigue reservada para trabajo aprobado. No mezclar las ramas automáticamente.
+## Estado técnico verificado
 
-## Arquitectura
+La conexión GitHub → Cloudflare se encuentra operativa.
 
-- Frontend: Astro 7, totalmente estático.
-- Infraestructura propuesta: **Cloudflare Workers con Static Assets**.
-- CLI actual para proyectos nuevos: **cf 1.0.0-rc.1** (Cloudflare).
-- Worker exclusivo de pruebas: **beego-staging**.
-- Build: \`npm run build\` (crea \`./dist\`).
-- Despliegue previsto: \`npm run deploy:staging\` (publica \`./dist\` usando \`cloudflare.config.ts\`).
-- No hay Worker de producción configurado.
-- No hay base de datos, pagos, renta ni API conectada.
+| Parámetro | Valor |
+|---|---|
+| Cuenta Cloudflare | America Group Roofing \| Digital Projects |
+| Organización GitHub | America-Group-Roofing |
+| Repositorio | beego |
+| Rama del Worker staging | develop |
+| Directorio raíz | / |
+| Comando de compilación | `npm run build` |
+| Comando de despliegue | `npm run deploy:staging` |
+| Preview builds | Desactivadas |
+| Worker | `beego-staging` |
+| Plataforma | Cloudflare Workers con Static Assets |
+| URL de staging | https://beego-staging.america-group-roofing-digital-projects.workers.dev |
 
-## Conectar GitHub a Cloudflare
+Se corrigió una conexión que inicialmente apuntaba a `main`, que carece de `package.json`. El Worker se renombró de `beego` a `beego-staging` para coincidir con `cloudflare.config.ts`. La ejecución posterior compiló las seis páginas y desplegó correctamente los archivos estáticos.
 
-Cloudflare requiere que su propia **Cloudflare GitHub App** sea autorizada para la organización \`America-Group-Roofing\` y el repositorio \`beego\`. El conector de GitHub de ChatGPT es una aplicación distinta y no concede esos permisos automáticamente.
+## Archivos de configuración
 
-1. Cloudflare → Workers & Pages → Create application → GitHub (o Worker → Settings → Builds → Connect).
-2. Autorizar la Cloudflare GitHub App para \`America-Group-Roofing\` y sólo el repositorio \`beego\`.
-3. Elegir la rama \`develop\` como fuente del proyecto de pruebas.
-4. Configurar build \`npm run build\`, deploy \`npm run deploy:staging\`, Node >=22.23.4.
-5. Verificar que el Worker destino se llame exactamente \`beego-staging\`.
-6. Comprobar la compilación y la URL de pruebas antes de compartirla.
+- `package.json`: Astro, scripts `build` y `deploy:staging`.
+- `cloudflare.config.ts`: Worker `beego-staging`.
+- `astro.config.mjs`: salida estática con URLs terminadas en barra.
+- `public/robots.txt` y `src/layouts/BaseLayout.astro`: no indexar staging.
+- `.github/workflows/validate.yml`: compilación y comprobación de fundamentos.
 
-**La conexión de ChatGPT con GitHub y Cloudflare no equivale a la conexión GitHub → Cloudflare Builds.**
+## Pendientes de calidad
 
-## Seguridad y publicación
+1. Generar `package-lock.json` desde el archivo `package.json` vigente y añadirlo al repositorio para builds reproducibles y caché.
+2. Incorporar assets oficiales BeeGo y reemplazar placeholders.
+3. Evaluar protección con Cloudflare Access si las vistas de staging contienen material no público.
+4. Efectuar pruebas manuales de teclado, navegación, zoom, diseño responsive y accesibilidad.
+5. Establecer documentos y canales reales de soporte antes de habilitar formularios u operaciones.
+6. Mantener despliegues de pruebas sin habilitar pagos, rentas o estaciones ficticias.
 
-- La URL workers.dev puede ser públicamente accesible incluso en staging. El archivo robots.txt y noindex no son autenticación.
-- No desplegar a un dominio principal de BeeGo sin autorización adicional.
-- Revisar fotos, logotipos y avisos legales antes del sitio comercial.
-- No subir archivos .env reales, tokens, datos personales o documentos internos.
-- No publicar falsas estaciones, tarifas, transacciones o confirmaciones de devolución.
+## Límites y seguridad
 
-## Verificación previa
+Esta URL de Workers puede ser accesible a cualquier persona que conozca la dirección. `noindex` y `robots.txt` sólo son señales para buscadores; no son controles de acceso.
 
-1. \`npm install\` en una máquina/runner con acceso a npm; generar y conservar \`package-lock.json\`.
-2. \`npm run check\` y \`npm run build\`.
-3. Confirmar que las páginas de prueba indiquen que BeeGo está en preparación.
-4. Revisar accesibilidad, enlaces y responsive.
-5. Autorizar y probar la publicación independiente de \`beego-staging\`.
+**No utilizar `main` como rama de despliegue de este entorno.** No conectar un dominio principal ni publicar comercialmente sin autorización adicional.
+
+No se han creado bases de datos D1, R2, integraciones de pago ni sistemas de renta.

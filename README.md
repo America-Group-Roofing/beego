@@ -1,43 +1,55 @@
-# BeeGo · Web (Astro)
+# BeeGo · Sitio web (Astro)
 
-Repositorio de **BeeGo**, proyecto independiente dentro de la organización **America-Group-Roofing**.
+Proyecto independiente **BeeGo** dentro de la organización **America-Group-Roofing**.
 
 **Eslogan oficial:** Energía que va contigo.
 
-## Estado
+## Estado actual — 19 de noviembre de 2026
 
-**Preparación preoperativa**, no lanzamiento comercial. La rama develop contiene la base del proyecto; main conserva la documentación aprobada. No hay estaciones públicas verificadas, rentas, tarifas, pagos ni soporte operativo habilitado desde esta base.
+- **Preoperativo / staging**: no constituye un lanzamiento comercial.
+- Rama `develop`: aplicación Astro estática y despliegues automáticos de prueba.
+- Rama `main`: documentación de referencia; no está vinculada al despliegue de staging.
+- Worker Cloudflare: `beego-staging`.
+- URL de pruebas: https://beego-staging.america-group-roofing-digital-projects.workers.dev
+- Primer despliegue de staging desde `develop` completado correctamente el 19 de noviembre de 2026.
+- No hay estaciones públicas verificadas, tarifas aprobadas, pagos ni rentas integradas.
 
-## Stack inicial
+## Stack
 
-- Astro 7 (renderizado estático, sin adaptador de servidor).
-- HTML y CSS accesibles; interactividad sólo cuando haga falta.
-- GitHub para control de versiones.
-- Cloudflare Workers con Static Assets como destino propuesto; staging no conectado ni publicado por defecto.
-- Node.js >= 22.23.4.
+- Astro 7, HTML y CSS, con salida estática.
+- GitHub como control de versiones.
+- Cloudflare Workers con Static Assets como alojamiento de staging.
+- Cloudflare CLI `cf` para despliegue de archivos `dist`.
+- Node.js >=22.23.4.
 
-## Desarrollo local
+## Comandos
 
-1. Instala la versión de Node de .nvmrc.
-2. Ejecuta npm install para generar el lockfile.
-3. Ejecuta npm run check y npm run build.
-4. Ejecuta npm run dev para una vista local.
+```sh
+npm install
+npm run check
+npm run build
+npm run dev
+```
 
-No se han generado ni subido carpetas node_modules o dist, ni un lockfile inventado.
+El `package-lock.json` está pendiente de generar y añadir. Por ello Cloudflare puede omitir la caché de dependencias; el despliegue inicial funcionó correctamente sin ese archivo. No se han subido carpetas generadas como `node_modules` ni `dist`.
 
-## Estructura
+## Organización
 
-- src/layouts: marco de página.
-- src/components: cabecera y pie de página.
-- src/pages: páginas públicas iniciales.
-- src/styles: estilos base.
-- docs: acuerdos de publicación y assets.
-- public: directivas de no indexación de staging.
+- `src/pages`: páginas públicas de preparación.
+- `src/components`: elementos compartidos.
+- `src/layouts`: estructura general.
+- `src/styles`: estilos preliminares.
+- `public`: recursos estáticos y bloqueo de rastreo de staging.
+- `docs`: estado, políticas y assets.
 
-La interfaz es un **andamiaje funcional**, no el diseño visual final. Los logos, render oficial y fotografías deben incorporarse de sus fuentes aprobadas.
+**Este diseño es un andamiaje técnico, no la interfaz premium definitiva.** Se deben incorporar los recursos BeeGo aprobados antes de considerar una publicación comercial.
 
-## Gobernanza
+## Seguridad y gobernanza
 
-Los documentos maestros y el Brand Book BeeGo tienen prioridad sobre los placeholders. No mezclar recursos de otras marcas ni confirmar funciones de renta sin validación.
+- No almacenar credenciales, tokens, documentos internos ni datos personales en el repositorio.
+- No confundir renders con prestaciones probadas ni simular estaciones, cobros o devoluciones.
+- El acceso por URL al Worker de staging puede ser público. `noindex` y `robots.txt` no sustituyen autenticación.
+- Mantener BeeGo separado de otros proyectos de America Group Roofing.
+- No promover `develop` a `main` ni usar un dominio de producción sin revisión.
 
-Lee docs/ESTADO-Y-PUBLICACION.md antes de conectar un despliegue.
+Ver [estado y publicación](docs/ESTADO-Y-PUBLICACION.md).
