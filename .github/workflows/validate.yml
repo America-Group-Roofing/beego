@@ -1,0 +1,28 @@
+name: Validar base BeeGo
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Obtener código
+        uses: actions/checkout@v4
+      - name: Node.js compatible con Astro
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.23.4'
+      - name: Instalar dependencias
+        run: npm install --no-audit --no-fund
+      - name: Revisar fundamentos
+        run: npm run check
+      - name: Compilar Astro estático
+        run: npm run build
