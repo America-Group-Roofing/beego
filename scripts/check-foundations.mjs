@@ -16,7 +16,9 @@ const css = read("src/styles/global.css");
 assert.ok(home.includes("Energía que va contigo"), "Conservar eslogan oficial");
 assert.ok(stations.includes("Aún no hay estaciones disponibles para mostrar"), "No inventar ubicaciones");
 assert.ok(layout.includes("noindex, nofollow"), "Mantener staging sin indexación");
-assert.ok(read("public/robots.txt").includes("Disallow: /"), "Mantener directivas robots staging");
+assert.ok(read("public/robots.txt").includes("Allow: /"), "Permitir rastreo para vistas previas sociales; noindex permanece");
+assert.ok(layout.includes("beego-og-inicio.png"),"Usar OG01 como imagen social");
+assert.ok(layout.includes("summary_large_image"),"Configurar tarjeta social amplia");
 for (const color of ["#FCCF01", "#000000", "#FFFFFF", "#171717", "#F5F5F3"]) assert.ok(css.includes(color), "Falta color oficial " + color);
 for (const name of [
   "beego-hero.webp", "beego-producto-frontal.webp", "beego-producto-lateral-usbc.webp",

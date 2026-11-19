@@ -1,3 +1,4 @@
-# Entorno de desarrollo; nunca copiar este archivo sin revisión a producción.
+# BeeGo: permitir acceso a lectores de enlaces compartidos.
+# El entorno de staging mantiene meta robots noindex, nofollow en HTML.
 User-agent: *
-Disallow: /
+Allow: /
