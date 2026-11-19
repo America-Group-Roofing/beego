@@ -1,25 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const steps = [
-  ["Encuentra una estación", "Consulta las ubicaciones verificadas cuando estén habilitadas."],
-  ["Escanea y consulta", "Accede al proceso de renta y conoce las condiciones antes de aceptar."],
-  ["Autoriza y retira", "Completa la autorización aplicable y confirma la entrega de la batería."],
-  ["Utiliza tu batería", "Continúa tus actividades con una conexión compatible."],
-  ["Devuelve y finaliza", "Deposita el equipo en un punto compatible y verifica que la devolución se registre."],
+const steps=[
+["01","Encuentra una estación","Consulta las ubicaciones verificadas cuando estén habilitadas.",null],
+["02","Escanea y consulta","Accede al proceso de renta y revisa tarifas y condiciones antes de aceptar.",null],
+["03","Autoriza y retira","Completa la autorización aplicable y confirma la entrega.","beego-il-retirar-conceptual.webp"],
+["04","Utiliza tu batería","Continúa tus actividades con una conexión compatible.","beego-hero.webp"],
+["05","Devuelve y finaliza","Entrega la batería y verifica que la devolución quede registrada.","beego-il-devolver-conceptual.webp"]
 ];
 ---
-<BaseLayout title="Cómo funciona" description="Conoce el funcionamiento previsto del servicio de energía portátil compartida BeeGo.">
-  <section class="page-heading container">
-    <p class="eyebrow">EL RECORRIDO PREVISTO</p>
-    <h1>Cómo funciona BeeGo</h1>
-    <p class="lead">Con BeeGo puedes llevar una batería portátil mientras continúas tus actividades.</p>
-    <p class="notice">Esta explicación representa el servicio objetivo y está sujeta a validación del hardware, métodos de pago, tarifas y compatibilidad de devoluciones.</p>
-  </section>
-  <section class="section section--soft">
-    <div class="container list-steps">
-      {steps.map(([heading, description], i) => (
-        <article class="step-row"><span class="step-number">{String(i + 1).padStart(2, "0")}</span><div><h2>{heading}</h2><p>{description}</p></div></article>
-      ))}
-    </div>
-  </section>
+<BaseLayout title="Cómo funciona" description="Cinco etapas previstas de la experiencia BeeGo: encontrar, consultar, retirar, utilizar y devolver.">
+  <section class="page-heading container"><p class="eyebrow">EL SERVICIO EN DESARROLLO</p><h1>Cómo funciona BeeGo</h1><p class="lead">Con BeeGo puedes llevar una batería portátil mientras continúas tus actividades.</p><p class="notice">Este recorrido es conceptual. Pagos, tarifas, retiro y devoluciones requieren validación del sistema operativo.</p></section>
+  <section class="section section--soft"><div class="container how-steps">
+    {steps.map(([num,title,desc,img])=><article class="how-step">
+      <div><span class="how-step__number">{num}</span><h2>{title}</h2><p>{desc}</p></div>
+      {img?<figure><img src={"/assets/"+img} alt={"Ilustración del paso: "+title+". Escena conceptual, sin operación real acreditada."} width={img==="beego-hero.webp"?1050:1000} height={img==="beego-hero.webp"?1341:img==="beego-il-retirar-conceptual.webp"?750:752} loading="lazy" decoding="async"/><figcaption>Representación conceptual; no indica estación operativa.</figcaption></figure>:<div class="how-step__abstract" aria-hidden="true">{num}</div>}
+    </article>)}
+  </div></section>
 </BaseLayout>

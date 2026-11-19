@@ -1,20 +1,16 @@
 ---
-const links = [
-  { href: "/", label: "Inicio" },
-  { href: "/como-funciona/", label: "Cómo funciona" },
-  { href: "/estaciones/", label: "Estaciones" },
-  { href: "/negocios/", label: "Para negocios" },
-  { href: "/ayuda/", label: "Ayuda" },
+const links=[
+{href:"/",label:"Inicio"},
+{href:"/como-funciona/",label:"Cómo funciona"},
+{href:"/bateria-beego/",label:"Conoce BeeGo"},
+{href:"/estaciones/",label:"Estaciones"},
+{href:"/negocios/",label:"Para negocios"},
+{href:"/ayuda/",label:"Ayuda"}
 ];
+const active=(href:string)=> Astro.url.pathname===href||Astro.url.pathname===href.slice(0,-1);
 ---
-<header class="site-header">
-  <div class="container nav-shell">
-    <a class="brand-placeholder" href="/" aria-label="BeeGo — ir al inicio">
-      <span class="brand-placeholder__name">BeeGo</span>
-      <span class="brand-placeholder__tag">Entorno de pruebas</span>
-    </a>
-    <nav aria-label="Navegación principal" class="primary-nav">
-      {links.map((link) => <a href={link.href} aria-current={Astro.url.pathname === link.href ? "page" : undefined}>{link.label}</a>)}
-    </nav>
-  </div>
-</header>
+<header class="site-header"><div class="container nav-shell">
+  <a class="brand-placeholder" href="/" aria-label="BeeGo — ir al inicio"><strong class="brand-placeholder__name">BeeGo</strong><small class="brand-placeholder__tag">Energía que va contigo</small></a>
+  <nav class="primary-nav" aria-label="Navegación principal">{links.slice(1).map(l=><a href={l.href} aria-current={active(l.href)?"page":undefined}>{l.label}</a>)}</nav>
+  <details class="mobile-menu"><summary>Menú <span aria-hidden="true">☰</span></summary><nav aria-label="Navegación móvil">{links.map(l=><a href={l.href} aria-current={active(l.href)?"page":undefined}>{l.label}</a>)}</nav></details>
+</div></header>
