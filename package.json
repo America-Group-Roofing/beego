@@ -8,12 +8,16 @@
     "dev": "astro dev --host 0.0.0.0",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "node scripts/check-foundations.mjs"
+    "check": "node scripts/check-foundations.mjs",
+    "deploy:staging": "cf deploy ./dist"
   },
   "dependencies": {
     "astro": "^7.4.0"
   },
   "engines": {
     "node": ">=22.23.4"
+  },
+  "devDependencies": {
+    "cf": "1.0.0-rc.1"
   }
 }
