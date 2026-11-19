@@ -1,0 +1,183 @@
+{
+  "generated": "2026-11-19",
+  "source_directory": "assets/",
+  "count_raster": 10,
+  "disclaimer": "Revisión técnica automatizada. No certifica fidelidad visual, licencia de uso, fabricante ni operación real.",
+  "files": [
+    {
+      "path": "assets/Batería portátil BeeGo amarilla.png",
+      "bytes": 995850,
+      "sha256": "b5473b9bb6e21f32d77e219c60f07bbc6acfe6f90952a34b119f45bb6968066d",
+      "width": 1086,
+      "height": 1448,
+      "format": "PNG",
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_content_bbox": [
+        0,
+        37,
+        1068,
+        1352
+      ],
+      "review_status": "pendiente de validación final",
+      "production_ready": false
+    },
+    {
+      "path": "assets/BeeGo_IL01_Encontrar_Estacion_Final_Conceptual.png",
+      "bytes": 1918965,
+      "sha256": "a006f5998cd187bb565b8a20bd6fde26f46d2ae643122d7005d6644cad8adb1d",
+      "width": 1448,
+      "height": 1086,
+      "format": "PNG",
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_content_bbox": [
+        0,
+        0,
+        1448,
+        1086
+      ],
+      "review_status": "pendiente de validación final",
+      "production_ready": false
+    },
+    {
+      "path": "assets/BeeGo_IL02_Retirar_Bateria_Web.webp",
+      "bytes": 155506,
+      "sha256": "5896d8b4ed8d55fa96c878f3853638084a3cf4ddc18826dccc309176f003007a",
+      "width": 1448,
+      "height": 1086,
+      "format": "WEBP",
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_content_bbox": [
+        0,
+        0,
+        1430,
+        1086
+      ],
+      "review_status": "pendiente de validación final",
+      "production_ready": false
+    },
+    {
+      "path": "assets/BeeGo_OG01_Inicio_1200x630.png",
+      "bytes": 290030,
+      "sha256": "b3ebb7f8467a9980da685a8d4cb46640113130063e64726149f61035d54a6628",
+      "width": 1200,
+      "height": 630,
+      "format": "PNG",
+      "mode": "RGB",
+      "has_alpha": false,
+      "alpha_content_bbox": null,
+      "review_status": "pendiente de validación final",
+      "production_ready": false
+    },
+    {
+      "path": "assets/BeeGo_PB05_Lateral_USB_C_Transparente.png",
+      "bytes": 397079,
+      "sha256": "79a9a14dff669aefe928e0cf8b3f1dbf736153cf243f0656b62b363c268d99d8",
+      "width": 887,
+      "height": 1774,
+      "format": "PNG",
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_content_bbox": [
+        343,
+        21,
+        544,
+        1755
+      ],
+      "review_status": "pendiente de validación final",
+      "production_ready": false
+    },
+    {
+      "path": "assets/BeeGo_PB06_Contactos_Inferiores_Transparente.png",
+      "bytes": 1340501,
+      "sha256": "d6cecdfe4ea466015952b513ddb58ed51179766f93fdd15f90353a5b5e1513d2",
+      "width": 2172,
+      "height": 724,
+      "format": "PNG",
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_content_bbox": [
+        82,
+        136,
+        2076,
+        603
+      ],
+      "review_status": "pendiente de validación final",
+      "production_ready": false
+    },
+    {
+      "path": "assets/Dispositivo amarillo minimalista en perfil.png",
+      "bytes": 498808,
+      "sha256": "49072ff7ea77a2fac3ad4622a52b98645d8178c7ebd5718e9d5f156f2dac839d",
+      "width": 887,
+      "height": 1774,
+      "format": "PNG",
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_content_bbox": [
+        39,
+        19,
+        861,
+        1759
+      ],
+      "review_status": "pendiente de validación final",
+      "production_ready": false
+    },
+    {
+      "path": "assets/Mujer devolviendo batería BeeGo.png",
+      "bytes": 1863312,
+      "sha256": "90e8b0b31bb9714995e8753238a28c68f5e206aa925e7b4245f03095db5c118f",
+      "width": 1446,
+      "height": 1087,
+      "format": "PNG",
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_content_bbox": [
+        0,
+        0,
+        1434,
+        1087
+      ],
+      "review_status": "pendiente de validación final",
+      "production_ready": false
+    },
+    {
+      "path": "assets/Power Bank Amarillo BeeGo.png",
+      "bytes": 1864112,
+      "sha256": "6b66aead8bbd6da6ee3df8ba5b35d4538ebe6555707a63d420c7e419344a2cea",
+      "width": 887,
+      "height": 1774,
+      "format": "PNG",
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_content_bbox": [
+        0,
+        0,
+        844,
+        1726
+      ],
+      "review_status": "pendiente de validación final",
+      "production_ready": false
+    },
+    {
+      "path": "assets/Power Bank Amarillo con Cables Integrados.png",
+      "bytes": 2073769,
+      "sha256": "e8da02440dbb11c076594126968f102f6c942f129407bfbe44d7628edac8782a",
+      "width": 1024,
+      "height": 1536,
+      "format": "PNG",
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_content_bbox": [
+        158,
+        0,
+        1000,
+        1490
+      ],
+      "review_status": "pendiente de validación final",
+      "production_ready": false
+    }
+  ]
+}
