@@ -1,20 +1,19 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
-
-const read = (file) => readFileSync(new URL("../" + file, import.meta.url), "utf8");
-
-const home = read("src/pages/index.astro");
-const stations = read("src/pages/estaciones.astro");
-const layout = read("src/layouts/BaseLayout.astro");
-const css = read("src/styles/global.css");
-const robots = read("public/robots.txt");
-
-assert.ok(home.includes("Energía que va contigo"), "Debe conservarse el eslogan oficial.");
-assert.ok(home.includes("Aún no ofrecemos rentas al público"), "Debe aclararse la etapa preoperativa.");
-assert.ok(stations.includes("Estamos desarrollando nuestra red de estaciones en Tijuana"), "No deben simularse estaciones.");
-assert.ok(layout.includes("noindex, nofollow"), "Staging debe evitar indexación.");
-assert.ok(robots.includes("Disallow: /"), "Staging debe bloquear rastreo.");
-for (const color of ["#FCCF01", "#000000", "#FFFFFF", "#171717", "#F5F5F3"]) {
-  assert.ok(css.includes(color), "Falta color oficial " + color);
-}
-console.log("Revisión documental básica: correcta.");
+import {readFileSync,existsSync} from "node:fs";
+const read=p=>readFileSync(new URL("../"+p,import.meta.url),"utf8");
+const exists=p=>existsSync(new URL("../"+p,import.meta.url));
+const home=read("src/pages/index.astro");
+const stations=read("src/pages/estaciones.astro");
+const product=read("src/pages/bateria-beego.astro");
+const layout=read("src/layouts/BaseLayout.astro");
+const css=read("src/styles/global.css");
+assert.ok(home.includes("Energía que va contigo"));
+assert.ok(home.includes("Aún no ofrecemos rentas al público"));
+assert.ok(stations.includes("Estamos desarrollando nuestra red de estaciones en Tijuana"));
+assert.ok(layout.includes("noindex, nofollow"));
+assert.ok(read("public/robots.txt").includes("Disallow: /"));
+for(const color of ["#FCCF01","#000000","#FFFFFF","#171717","#F5F5F3"])assert.ok(css.includes(color),"Falta color: "+color);
+for(const path of ["beego-hero.webp","beego-producto-frontal.webp","beego-producto-lateral-usbc.webp","beego-producto-lateral-boton.webp","beego-producto-contactos.webp","beego-il-retirar-conceptual.webp","beego-il-devolver-conceptual.webp","beego-og-inicio.png","beego-franjas-amarillo.svg"])assert.ok(exists("public/assets/"+path),"Asset faltante: "+path);
+assert.ok(!home.includes("BeeGo_IL01_Encontrar_Estacion_Final_Conceptual.png"));
+assert.ok(!product.includes("Power Bank Amarillo con Cables Integrados.png"));
+console.log("BeeGo: validación de assets, rutas, marca y staging correcta.");
