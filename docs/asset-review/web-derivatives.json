@@ -1,5 +1,5 @@
 {
-  "note": "Derivados de staging, no archivos maestros; se han excluido IL01 y el reverso con certificaciones no verificadas.",
+  "note": "Derivados de staging; IL01 sólo para una ilustración conceptual y PB03 sólo detalle recortado de cables. No deben publicarse certificaciones no acreditadas ni mapas reales simulados.",
   "files": [
     {
       "source": "assets/Batería portátil BeeGo amarilla.png",
@@ -47,6 +47,15 @@
       "status": "staging; requiere aprobación editorial para lanzamiento comercial"
     },
     {
+      "source": "assets/BeeGo_IL01_Encontrar_Estacion_Final_Conceptual.png",
+      "output": "public/assets/beego-il-encontrar-conceptual.webp",
+      "width": 1000,
+      "height": 750,
+      "bytes": 125818,
+      "sha256": "dd089e144a92a5dd79ddddbec409b8441e29978f9cdb51ac13df0ad002f3bff3",
+      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+    },
+    {
       "source": "assets/BeeGo_IL02_Retirar_Bateria_Web.webp",
       "output": "public/assets/beego-il-retirar-conceptual.webp",
       "width": 1000,
@@ -63,6 +72,15 @@
       "bytes": 119484,
       "sha256": "89583597f179cedf1407cfe4f148d5932910c7b36e90a474715d55e62e1e829b",
       "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+    },
+    {
+      "source": "assets/Power Bank Amarillo con Cables Integrados.png",
+      "output": "public/assets/beego-producto-cables-posteriores.webp",
+      "width": 730,
+      "height": 408,
+      "bytes": 24944,
+      "sha256": "226b7f0b6f5765b0326b749dd5efb5c26fd05fac43fb84dc6ac36c39322e0af2",
+      "status": "vista parcial de cables; crop excluye especificaciones y sellos no validados"
     },
     {
       "source": "assets/BeeGo_OG01_Inicio_1200x630.png",
