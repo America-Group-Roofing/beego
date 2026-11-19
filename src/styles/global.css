@@ -150,3 +150,6 @@ p{max-width:70ch}
   .footer-grid{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
+
+/* BG05 — franjas originales en el lenguaje gráfico de secciones. */
+.section-stripes{display:block;width:112px;height:auto;max-width:100%;margin-bottom:23px;opacity:.93}

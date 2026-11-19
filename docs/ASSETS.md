@@ -1,29 +1,38 @@
-# Auditoría y ubicación de los assets BeeGo
+# BeeGo — control de los 12 assets prioritarios
 
-Actualizado: 19 de noviembre de 2026. Revisión para el entorno de pruebas, no aprobación comercial.
+Corte: 19 de noviembre de 2026. **Staging, no lanzamiento comercial.** Fuente: inventario de 12 assets proporcionado por la dirección del proyecto.
 
-Se conservan los 10 archivos PNG/WebP y los 3 SVG originales de la carpeta assets. El archivo .node no es un asset. La revisión técnica se puede consultar en docs/asset-review/inventory.json y el mosaico de las diez imágenes en docs/asset-review/contact-sheet.jpg. El registro de los once derivados está en docs/asset-review/web-derivatives.json.
+## Matriz exacta de colocación
 
-## Destinos por imagen
+| Código | Material encontrado | Uso acordado | Estado técnico |
+|---|---|---|---|
+| PB01 | Batería portátil BeeGo amarilla.png | Inicio H01, hero | Integrado en `/assets/beego-hero.webp` |
+| PB02 | Power Bank Amarillo BeeGo.png | Inicio H04, P01 galería frontal | Integrado |
+| PB03 | Power Bank Amarillo con Cables Integrados.png | P01 detalle posterior y cables | Integrado **parcialmente** como recorte inferior sin datos técnicos ni sellos no verificados |
+| PB04 | Dispositivo amarillo minimalista en perfil.png | P01 lateral con botón | Integrado, código provisional |
+| PB05 | BeeGo_PB05_Lateral_USB_C_Transparente.png | P01 lateral USB-C | Integrado |
+| PB06 | BeeGo_PB06_Contactos_Inferiores_Transparente.png | P01 contactos inferiores | Integrado |
+| FT01 | **No aparece en `assets/`** | Inicio H02, fotografía urbana | **Pendiente de entrega**; no sustituida artificialmente |
+| IL01 | BeeGo_IL01_Encontrar_Estacion_Final_Conceptual.png | Inicio H03 paso 1, Cómo funciona | Integrado sólo como imagen **conceptual**; el mapa visible es ficticio y no refleja estaciones reales |
+| IL02 | BeeGo_IL02_Retirar_Bateria_Web.webp | Inicio H03 paso 2, Cómo funciona | Integrado como representación conceptual |
+| IL03 | Mujer devolviendo batería BeeGo.png | Inicio H03 paso 3, Cómo funciona | Integrado como representación conceptual |
+| BG05 | BG05_franjas_dobles_amarillo/blanco/negro.svg | Sistema gráfico, especialmente H03 y divisores | Integrado en hero, H03 y otras secciones; tres variantes registradas |
+| OG01 | BeeGo_OG01_Inicio_1200x630.png | Metadatos Open Graph | Integrado en el layout global de staging |
 
-| Original | Código de trabajo | Uso |
-| --- | --- | --- |
-| Batería portátil BeeGo amarilla.png | PB01 | Hero de Inicio, perspectiva de Producto y recorrido ilustrativo |
-| Power Bank Amarillo BeeGo.png | PB02 | Inicio H04 y galería de Producto |
-| BeeGo_PB05_Lateral_USB_C_Transparente.png | PB05 | Galería: vista lateral USB-C |
-| Dispositivo amarillo minimalista en perfil.png | PB04 provisional | Galería: lateral con botón |
-| BeeGo_PB06_Contactos_Inferiores_Transparente.png | PB06 | Galería: extremo inferior |
-| BeeGo_IL02_Retirar_Bateria_Web.webp | IL02 | Inicio y Cómo funciona, con aviso conceptual |
-| Mujer devolviendo batería BeeGo.png | IL03 provisional | Inicio, Cómo funciona y Negocios, con aviso conceptual |
-| BeeGo_OG01_Inicio_1200x630.png | OG01 | Vista previa de enlaces en staging |
-| BeeGo_IL01_Encontrar_Estacion_Final_Conceptual.png | IL01 | Excluido de la web: mapa con ubicaciones ilustrativas que pueden confundirse con cobertura |
-| Power Bank Amarillo con Cables Integrados.png | PB03 provisional | Excluido de la web: contiene símbolos y certificaciones de fabricante no verificadas |
-| Tres SVG BG05 de franjas paralelas | BG05 | Uso decorativo, no reemplazan el logotipo oficial |
+**Resumen:** 11/12 códigos de producción tienen ubicación en la interfaz o metadata. FT01 está ausente. PB03 se utiliza sólo como detalle parcial de cables, no se presenta la parte que contiene certificaciones y especificaciones no verificadas. Entre los 12, BG05 es un grupo de tres variantes.
 
-## Gobierno y publicación
+## Procedencia y control
 
-Los originales de assets no se modificaron ni se movieron. Los derivados optimizados WebP, PNG y SVG están en public/assets y se sirven de forma estática. Los once derivados no equivalen a once assets finales aprobados.
+- Los originales se conservan intactos en `assets/`. No se han movido ni sobrescrito.
+- Los derivados optimizados se guardan en `public/assets/` y se generan mediante `scripts/build-web-assets.py`.
+- Inventario original: `docs/asset-review/inventory.json`, hoja de contacto: `docs/asset-review/contact-sheet.jpg`, derivados y trazabilidad: `docs/asset-review/web-derivatives.json`.
+- El archivo `assets/.node` no es una imagen ni cuenta en la cifra.
+- Los textos e ilustraciones de estaciones siguen etiquetados como **conceptuales**, sin insinuar localizaciones, compatibilidad, disponibilidad ni devoluciones confirmadas.
+- El recorte de PB03 no valida que los cables de un producto manufacturado tengan las especificaciones del diseño.
+- El registro de códigos PB04 e IL03 es provisional hasta aprobar el catálogo final de nombres.
 
-Quedan pendientes: logotipos oficiales individuales dentro del repositorio, revisión de licencia de fotografías de personas, especificaciones técnicas verificadas, muestras manufacturadas y validación de los modelos de estación. No se presentan estaciones ni operaciones reales.
+## Pendientes para aprobación comercial
 
-Las imágenes de estaciones y devoluciones están etiquetadas como conceptuales. Las vistas de producto se consideran renders de diseño. No se utilizan mapas ficticios, precios inventados ni certificaciones no acreditadas.
+FT01, logotipos oficiales individuales optimizados, derechos de uso de imágenes con personas, dimensiones técnicas de fabricación, certificaciones verificadas, hardware final de estaciones y las condiciones reales de renta. La imagen OG01 comunica que la red está en desarrollo. La funcionalidad de estaciones no es un mapa activo.
+
+La página sólo es una presentación de staging preoperativo, **no debe publicarse como anuncio de operaciones habilitadas**.

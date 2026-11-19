@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const steps=[
-["01","Encuentra una estación","Consulta las ubicaciones verificadas cuando estén habilitadas.",null],
+["01","Encuentra una estación","Consulta las ubicaciones verificadas cuando estén habilitadas.","beego-il-encontrar-conceptual.webp"],
 ["02","Escanea y consulta","Accede al proceso de renta y revisa tarifas y condiciones antes de aceptar.",null],
 ["03","Autoriza y retira","Completa la autorización aplicable y confirma la entrega.","beego-il-retirar-conceptual.webp"],
 ["04","Utiliza tu batería","Continúa tus actividades con una conexión compatible.","beego-hero.webp"],
@@ -10,10 +10,12 @@ const steps=[
 ---
 <BaseLayout title="Cómo funciona" description="Cinco etapas previstas de la experiencia BeeGo: encontrar, consultar, retirar, utilizar y devolver.">
   <section class="page-heading container"><p class="eyebrow">EL SERVICIO EN DESARROLLO</p><h1>Cómo funciona BeeGo</h1><p class="lead">Con BeeGo puedes llevar una batería portátil mientras continúas tus actividades.</p><p class="notice">Este recorrido es conceptual. Pagos, tarifas, retiro y devoluciones requieren validación del sistema operativo.</p></section>
-  <section class="section section--soft"><div class="container how-steps">
+  <section class="section section--soft"><div class="container">
+    <img class="section-stripes" src="/assets/beego-franjas-negro.svg" width="400" height="48" alt="" aria-hidden="true" loading="lazy"/>
+    <div class="how-steps">
     {steps.map(([num,title,desc,img])=><article class="how-step">
       <div><span class="how-step__number">{num}</span><h2>{title}</h2><p>{desc}</p></div>
-      {img?<figure><img src={"/assets/"+img} alt={"Ilustración del paso: "+title+". Escena conceptual, sin operación real acreditada."} width={img==="beego-hero.webp"?1050:1000} height={img==="beego-hero.webp"?1341:img==="beego-il-retirar-conceptual.webp"?750:752} loading="lazy" decoding="async"/><figcaption>Representación conceptual; no indica estación operativa.</figcaption></figure>:<div class="how-step__abstract" aria-hidden="true">{num}</div>}
+      {img?<figure><img src={"/assets/"+img} alt={img==="beego-il-encontrar-conceptual.webp"?"Persona consultando un mapa ilustrativo BeeGo con una estación conceptual; ubicaciones ficticias, no disponibilidad real.":"Ilustración conceptual del paso "+title+"; no corresponde a una operación real acreditada."} width={img==="beego-hero.webp"?1050:1000} height={img==="beego-hero.webp"?1341:img==="beego-il-retirar-conceptual.webp"||img==="beego-il-encontrar-conceptual.webp"?750:752} loading="lazy" decoding="async"/><figcaption>Representación conceptual; no indica estación operativa.</figcaption></figure>:<div class="how-step__abstract" aria-hidden="true">{num}</div>}
     </article>)}
-  </div></section>
+  </div></div></section>
 </BaseLayout>

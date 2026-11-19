@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const views = [
 {code:"PB01",name:"Vista protagonista",file:"beego-hero.webp",width:1050,height:1341,alt:"Power bank amarillo BeeGo en perspectiva con identidad de abeja negra y rayo central."},
 {code:"PB02",name:"Vista frontal",file:"beego-producto-frontal.webp",width:740,height:1477,alt:"Vista frontal de batería BeeGo con tres luces y señal RETURN."},
+{code:"PB03",name:"Detalle posterior de cables",file:"beego-producto-cables-posteriores.webp",width:730,height:408,alt:"Recorte de la parte posterior inferior de la batería de referencia BeeGo que muestra dos cables integrados; no incluye sellos de certificación."},
 {code:"PB05",name:"Lateral USB-C",file:"beego-producto-lateral-usbc.webp",width:204,height:1250,alt:"Vista lateral ilustrativa de batería BeeGo con puerto USB-C."},
 {code:"PB04",name:"Lateral del botón",file:"beego-producto-lateral-boton.webp",width:380,height:760,alt:"Vista lateral amarilla de un dispositivo BeeGo con botón ovalado."},
 {code:"PB06",name:"Contactos inferiores",file:"beego-producto-contactos.webp",width:1250,height:342,alt:"Vista ilustrativa de la parte inferior del equipo con seis contactos circulares y dos elementos centrales oscuros."}
@@ -12,11 +13,12 @@ const views = [
   <section class="page-heading container"><p class="eyebrow">PRODUCT EXPERIENCE · BEEGO</p><h1>Conoce tu BeeGo</h1><p class="lead">La presentación visual de nuestra propuesta de batería portátil.</p><p class="notice">Las vistas son renders de diseño, no fotografías del producto fabricado ni validación técnica.</p></section>
   <section class="section section--soft">
     <div class="container">
+      <img class="section-stripes" src="/assets/beego-franjas-negro.svg" width="400" height="48" alt="" aria-hidden="true" loading="lazy"/>
       <h2>Explora el diseño</h2>
       <div class="product-gallery">
         {views.map((v,i)=><figure class:list={["product-gallery__item",{"product-gallery__item--hero":i===0}]}>
           <div class="product-gallery__canvas"><img src={"/assets/"+v.file} alt={v.alt} width={v.width} height={v.height} loading={i===0?"eager":"lazy"} decoding="async"/></div>
-          <figcaption><span>{v.code}</span><strong>{v.name}</strong><small>Referencia visual pendiente de comparación con el hardware definitivo.</small></figcaption>
+          <figcaption><span>{v.code}</span><strong>{v.name}</strong><small>{v.code==="PB03"?"Recorte parcial para mostrar cables: se excluyeron especificaciones y certificaciones no verificadas.":"Referencia visual pendiente de comparación con el hardware definitivo."}</small></figcaption>
         </figure>)}
       </div>
     </div>

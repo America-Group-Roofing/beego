@@ -13,7 +13,11 @@ assert.ok(stations.includes("Estamos desarrollando nuestra red de estaciones en 
 assert.ok(layout.includes("noindex, nofollow"));
 assert.ok(read("public/robots.txt").includes("Disallow: /"));
 for(const color of ["#FCCF01","#000000","#FFFFFF","#171717","#F5F5F3"])assert.ok(css.includes(color),"Falta color: "+color);
-for(const path of ["beego-hero.webp","beego-producto-frontal.webp","beego-producto-lateral-usbc.webp","beego-producto-lateral-boton.webp","beego-producto-contactos.webp","beego-il-retirar-conceptual.webp","beego-il-devolver-conceptual.webp","beego-og-inicio.png","beego-franjas-amarillo.svg"])assert.ok(exists("public/assets/"+path),"Asset faltante: "+path);
+for(const path of ["beego-hero.webp","beego-producto-frontal.webp","beego-producto-lateral-usbc.webp","beego-producto-lateral-boton.webp","beego-producto-contactos.webp","beego-il-retirar-conceptual.webp","beego-il-devolver-conceptual.webp","beego-il-encontrar-conceptual.webp","beego-producto-cables-posteriores.webp","beego-og-inicio.png","beego-franjas-amarillo.svg"])assert.ok(exists("public/assets/"+path),"Asset faltante: "+path);
 assert.ok(!home.includes("BeeGo_IL01_Encontrar_Estacion_Final_Conceptual.png"));
 assert.ok(!product.includes("Power Bank Amarillo con Cables Integrados.png"));
+assert.ok(home.includes("/assets/beego-il-encontrar-conceptual.webp"),"Falta IL01 en H03");
+assert.ok(read("src/pages/como-funciona.astro").includes("beego-il-encontrar-conceptual.webp"),"Falta IL01 en recorrido completo");
+assert.ok(product.includes("beego-producto-cables-posteriores.webp"),"Falta PB03 recortado");
+assert.ok(home.includes("FT01:"),"Debe documentarse FT01 pendiente");
 console.log("BeeGo: validación de assets, rutas, marca y staging correcta.");
