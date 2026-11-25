@@ -5,6 +5,8 @@ on:
     branches: [develop]
     paths:
       - "assets/**"
+      - "public/assets/LOTE 2/**"
+      - "scripts/audit-lote2.py"
       - "scripts/audit-assets.py"
       - "scripts/build-web-assets.py"
       - ".github/workflows/audit-assets.yml"
@@ -29,13 +31,15 @@ jobs:
         run: python -m pip install "Pillow>=11,<13"
       - name: Revisar originales
         run: python scripts/audit-assets.py
+      - name: Auditar LOTE 2: miniaturas, dimensiones y duplicados
+        run: python scripts/audit-lote2.py
       - name: Crear derivados WebP sin alterar originales
         run: python scripts/build-web-assets.py
       - name: Guardar inventario, miniaturas y archivos web
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/asset-review/inventory.json docs/asset-review/contact-sheet.jpg docs/asset-review/web-derivatives.json public/assets/
+          git add docs/asset-review/inventory.json docs/asset-review/contact-sheet.jpg docs/asset-review/web-derivatives.json docs/asset-review/lote2-manifest.json docs/asset-review/lote2-contact-1.jpg docs/asset-review/lote2-contact-2.jpg public/assets/
           if ! git diff --cached --quiet; then
             git commit -m "assets: actualizar derivados web y auditoría visual"
             git push origin HEAD:develop
