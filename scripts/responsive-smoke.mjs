@@ -22,7 +22,7 @@ for(const group of checks){
       const page=await browser.newPage({viewport:{width,height},deviceScaleFactor:1});
       for(const path of routes){
         try{
-          const response=await page.goto(new URL(path,base),{waitUntil:"domcontentloaded",timeout:30000});
+          const response=await page.goto(new URL(path,base).href,{waitUntil:"domcontentloaded",timeout:30000});
           if(!response?.ok())throw Error("HTTP "+response?.status());
           await page.locator("main").waitFor({state:"visible"});
           await page.evaluate(()=>document.fonts?.ready);
