@@ -2,13 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const steps=[
   {num:"01",title:"Encuentra una estación",description:"Busca una ubicación BeeGo y consulta las indicaciones de acceso.",image:"beego-il-encontrar-conceptual.webp",width:1000,height:750,alt:"Ilustración del uso del celular para consultar una estación BeeGo.",illustration:true},
-  {num:"02",title:"Escanea y consulta",description:"Revisa la información de la estación, el precio y las condiciones antes de continuar.",icon:"beego-icon-pago.svg"},
+  {num:"02",title:"Escanea y consulta",description:"Revisa la información de la estación, el precio y las condiciones antes de continuar.",visual:"conditions"},
   {num:"03",title:"Autoriza y retira",description:"Sigue las instrucciones para autorizar la renta y retirar la batería.",image:"beego-il-retirar-conceptual.webp",width:1000,height:750,alt:"Ilustración de una persona retirando su batería BeeGo.",illustration:true},
   {num:"04",title:"Lleva energía contigo",description:"Conecta tu dispositivo compatible y continúa disfrutando de tu día.",image:"beego-ft02-cafeteria.webp",width:900,height:720,alt:"Escena de cafetería con batería BeeGo y una persona utilizando su celular."},
   {num:"05",title:"Devuelve y confirma",description:"Regresa la batería a una estación habilitada y verifica que la devolución quede registrada.",image:"beego-il-devolver-conceptual.webp",width:1000,height:752,alt:"Ilustración de una persona devolviendo una batería a una estación BeeGo.",illustration:true}
 ];
 ---
 <BaseLayout title="Cómo funciona" description="Descubre cómo encontrar, retirar, utilizar y devolver una batería portátil BeeGo.">
+<div class="how-guide">
   <section class="page-heading container">
     <p class="eyebrow">ASÍ FUNCIONA BEEGO</p>
     <h1>Energía portátil en cinco pasos.</h1>
@@ -25,7 +26,17 @@ const steps=[
                 <img src={"/assets/"+step.image} width={step.width} height={step.height} alt={step.alt} loading="lazy" decoding="async"/>
                 {step.illustration&&<figcaption>Imagen ilustrativa.</figcaption>}
               </figure>
-            : <div class="how-step__symbol" aria-hidden="true"><img src={"/assets/"+step.icon} width="96" height="96" alt=""/></div>}
+            : <div class="how-step__conditions" aria-label="Dos comprobaciones antes de continuar">
+                <span class="how-step__conditions-label">CONSULTA ANTES DE RETIRAR</span>
+                <div class="how-step__condition">
+                  <span class="how-step__condition-icon"><img src="/assets/beego-icon-ubicacion.svg" width="36" height="36" alt="" aria-hidden="true"/></span>
+                  <div><strong>Identifica la estación</strong><span>Accede desde el código QR del equipo.</span></div>
+                </div>
+                <div class="how-step__condition">
+                  <span class="how-step__condition-icon"><img src="/assets/beego-icon-pago.svg" width="36" height="36" alt="" aria-hidden="true"/></span>
+                  <div><strong>Consulta las condiciones</strong><span>Revisa la tarifa y los cargos antes de autorizar.</span></div>
+                </div>
+              </div>}
         </article>)}
       </div>
     </div>
@@ -36,4 +47,5 @@ const steps=[
       <div><p>Antes de autorizar una renta, consulta la tarifa, los posibles cargos, el tiempo de uso y las condiciones de devolución.</p><a class="text-link" href="/ayuda/">Ver preguntas frecuentes <span aria-hidden="true">↗</span></a></div>
     </div>
   </section>
+</div>
 </BaseLayout>
