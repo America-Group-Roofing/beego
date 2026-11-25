@@ -35,9 +35,29 @@ for(const group of checks){
           if(info.scroll>info.viewport+3)errors.push(group.name+" "+label+" "+path+" overflow "+info.scroll+"/"+info.viewport);
           if(info.broken.length)errors.push(group.name+" "+label+" "+path+" failed images "+info.broken.join(","));
           if(!info.hasTitle)errors.push(group.name+" "+label+" "+path+" missing h1");
+          // Evitar falsos positivos: los archivos lazy pueden no haberse
+          // solicitado al evaluar una página sin desplazarla.
+          if(path==="/como-funciona/"){
+            const steps=await page.locator(".how-step").count();
+            if(steps!==5)errors.push(group.name+" "+label+" Cómo funciona tiene "+steps+" pasos, esperado 5");
+            const images=page.locator(".how-step__image img");
+            const count=await images.count();
+            if(count!==4)errors.push(group.name+" "+label+" Cómo funciona tiene "+count+" imágenes, esperado 4");
+            if(group.name==="Chromium"&&(label==="mobile-390"||label==="desktop-1440")){
+              for(let i=0;i<count;i++){
+                const img=images.nth(i);
+                await img.scrollIntoViewIfNeeded();
+                await img.evaluate(el=>{el.loading="eager"});
+                await img.evaluate(el=>el.decode());
+              }
+              const broken=await images.evaluateAll(imgs=>imgs.filter(im=>!im.complete||im.naturalWidth===0).map(im=>im.getAttribute("src")));
+              if(broken.length)errors.push(group.name+" "+label+" Cómo funciona: imágenes de pasos no cargadas "+broken.join(","));
+              await page.evaluate(()=>window.scrollTo(0,0));
+            }
+          }
           tested++;
           if(group.name==="Chromium"&&(label==="mobile-390"||label==="desktop-1440")&&
-             ["/","/negocios/","/bateria-beego/"].includes(path)){
+             ["/","/negocios/","/bateria-beego/","/como-funciona/"].includes(path)){
             const slug=path==="/"?"inicio":path.slice(1,-1);
             await page.screenshot({path:"qa/screenshots/"+label+"-"+slug+".png",fullPage:true,animations:"disabled"});
           }
