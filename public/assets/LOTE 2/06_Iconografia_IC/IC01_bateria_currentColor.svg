@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Batería portátil"><title>Batería portátil</title>
+  <rect x="2.4" y="5.5" width="17" height="13" rx="3" />
+  <path d="M21.4 9.5v5" />
+  <path d="m12.6 8.35-3.1 4.15h2.85l-.9 3.45 3.3-4.6H12z" />
+</svg>

@@ -1,0 +1,23 @@
+BeeGo — LOTE 02 | CONSOLIDACIÓN DE ASSETS WEB
+Fecha: 25 de noviembre de 2026
+
+34 códigos maestros presentes: BG01–BG06 (6), PB01–PB06 (6), FT01–FT07 (7), ES01–ES02 (2), IL01–IL04 (4), IC01–IC06 (6), OG01–OG03 (3).
+
+38 archivos gráficos individuales (23 archivos conservados del ZIP original y 15 archivos recuperados de generaciones anteriores).
+Los 15 recuperados representan 13 códigos faltantes; BG05 incluye sus 3 colores SVG (amarillo, blanco y negro).
+
+NO se generaron, retocaron, recolorearon ni recomprimieron imágenes. Los bytes del contenido gráfico son idénticos a las fuentes identificadas. Sólo se renombró la copia de PB02 para quitar (1), PB03 para identificar su código, y FT04 para identificar su código. Los nombres del contenido original del ZIP se conservaron.
+
+ATENCIÓN: integridad de archivo != aprobación de producto. Los renders del power bank, las estaciones conceptuales ES01 y ES02, las fotografías FT y las ilustraciones deben pasar validación visual/física antes de publicarse como hardware real o estaciones instaladas. Las estaciones no acreditan compatibilidad del modelo ni instalaciones efectivas. El archivo FT04 se recuperó del escenario de evento disponible; el nombre original era a_vivid_high_resolution_close_up_outdoor_concert.png.
+
+Contenido:
+  01_Identidad_BG/ : marca y patrones
+  02_Producto_PB/ : seis vistas de batería
+  03_Fotografia_FT/ : siete escenas editoriales
+  04_Estaciones_ES/ : dos conceptos de estación
+  05_Ilustraciones_IL/ : cuatro ilustraciones (IL04 en desktop y móvil)
+  06_Iconografia_IC/ : seis SVG adaptables a CSS
+  07_Redes_OG/ : tres PNG 1200 × 630
+  00_INVENTARIO/ : inventario con SHA256 y procedencia
+
+Importante: los SVG de BG05 son tres variantes de un solo asset maestro. BG06 e IL04 tienen versiones específicas para desktop y móvil.

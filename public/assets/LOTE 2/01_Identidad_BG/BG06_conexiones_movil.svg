@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 440" width="390" height="440" role="img" aria-label="Conexiones abstractas decorativas BeeGo">
+<title>BeeGo BG06 — conexiones abstractas</title><desc>Variante móvil decorativa: conexiones y nodos abstractos; sin ubicaciones reales.</desc>
+<polygon points="354.2,201.5 354.2,356.5 220.0,434.0 85.8,356.5 85.8,201.5 220.0,124.0" fill="none" stroke="#FCCF01" stroke-width="1.3" opacity="0.1"/>
+<polygon points="523.0,317.0 523.0,459.0 400.0,530.0 277.0,459.0 277.0,317.0 400.0,246.0" fill="none" stroke="#FCCF01" stroke-width="1.3" opacity="0.1"/>
+<polygon points="114.6,360.5 114.6,445.5 41.0,488.0 -32.6,445.5 -32.6,360.5 41.0,318.0" fill="none" stroke="#FCCF01" stroke-width="1.3" opacity="0.1"/>
+<circle cx="24" cy="128" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="24" cy="256" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="24" cy="384" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="56" cy="96" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="56" cy="224" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="56" cy="352" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="88" cy="192" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="88" cy="320" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="120" cy="160" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="120" cy="288" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="152" cy="128" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="152" cy="256" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="152" cy="384" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="184" cy="96" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="184" cy="224" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="184" cy="352" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="216" cy="192" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="216" cy="320" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="248" cy="160" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="248" cy="288" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="280" cy="128" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="280" cy="256" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="280" cy="384" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="312" cy="96" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="312" cy="224" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="312" cy="352" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="344" cy="192" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="344" cy="320" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="376" cy="160" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<circle cx="376" cy="288" r="1.2" fill="#FFFFFF" opacity="0.13"/>
+<path d="M -18 309 H 70 L 133 246 H 246 L 324 168 H 410" fill="none" stroke="#FCCF01" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.86"/>
+<path d="M 8 410 H 76 L 140 346 H 274 L 349 271 H 413" fill="none" stroke="#FCCF01" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.86"/>
+<path d="M 82 122 H 155 L 225 192 H 350 L 403 139" fill="none" stroke="#FCCF01" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.86"/>
+<circle cx="70" cy="309" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<circle cx="133" cy="246" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<circle cx="246" cy="246" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<circle cx="324" cy="168" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<circle cx="76" cy="410" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<circle cx="140" cy="346" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<circle cx="274" cy="346" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<circle cx="349" cy="271" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<circle cx="155" cy="122" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<circle cx="225" cy="192" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<circle cx="350" cy="192" r="7.1" fill="#FCCF01" opacity="0.96"/>
+<path d="M 246 246 V 281 L 274 309" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity="0.48"/>
+<path d="M 225 192 V 246 H 246" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity="0.48"/>
+<path d="M 140 346 V 309" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity="0.48"/>
+<path d="M 324 168 V 192 H 350" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity="0.48"/>
+<circle cx="246" cy="281" r="4.1" fill="#FFFFFF" opacity="0.72"/>
+<circle cx="274" cy="309" r="4.1" fill="#FFFFFF" opacity="0.72"/>
+<circle cx="140" cy="309" r="4.1" fill="#FFFFFF" opacity="0.72"/>
+<circle cx="350" cy="192" r="4.1" fill="#FFFFFF" opacity="0.72"/>
+<circle cx="246" cy="246" r="26" fill="none" opacity="0.9" stroke="#FCCF01" stroke-width="2.1"/>
+<circle cx="246" cy="246" r="17" fill="none" opacity="0.3" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="246" cy="246" r="3.6" fill="#171717" opacity="1"/>
+<polygon points="64.6,185.0 64.6,225.0 30.0,245.0 -4.6,225.0 -4.6,185.0 30.0,165.0" fill="none" stroke="#FCCF01" stroke-width="1.3" opacity="0.19"/>
+<polygon points="382.6,344.0 382.6,384.0 348.0,404.0 313.4,384.0 313.4,344.0 348.0,324.0" fill="none" stroke="#FCCF01" stroke-width="1.3" opacity="0.19"/>
+</svg>
