@@ -1,113 +1,383 @@
 {
-  "note": "Derivados de staging; IL01 sólo para una ilustración conceptual y PB03 sólo detalle recortado de cables. No deben publicarse certificaciones no acreditadas ni mapas reales simulados.",
+  "notice": "Derivados web del LOTE 2; fuentes originales preservadas; imágenes de estaciones y producto requieren contrastarse con hardware definitivo.",
   "files": [
     {
-      "source": "assets/Batería portátil BeeGo amarilla.png",
+      "source": "public/assets/LOTE 2/02_Producto_PB/BeeGo_PB01_Hero_Lateral_USB_C_Transparente.png",
       "output": "public/assets/beego-hero.webp",
-      "width": 1050,
-      "height": 1341,
-      "bytes": 81696,
-      "sha256": "f16feb30e0182540d70851ba8901ac9e4a3b2cddb483e07878e8eddaeb10cff0",
-      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+      "bytes": 32778,
+      "sha256": "68d0e95c4a1578ebd709de3cc6613a9bc5b494d4730b5d5fd78678a26712698a",
+      "width": 599,
+      "height": 1321,
+      "note": "Web optimizado"
     },
     {
-      "source": "assets/Power Bank Amarillo BeeGo.png",
+      "source": "public/assets/LOTE 2/02_Producto_PB/BeeGo_PB01_Hero_Lateral_USB_C_Transparente.png",
+      "output": "public/assets/beego-hero-mobile.webp",
+      "bytes": 24846,
+      "sha256": "59a3234e98d53c2a52ce0ad29168ef93ed519a482dda489c65c987d39e38dc92",
+      "width": 372,
+      "height": 820,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/02_Producto_PB/BeeGo_PB02_Vista_Frontal_Transparente.png",
       "output": "public/assets/beego-producto-frontal.webp",
-      "width": 740,
-      "height": 1477,
-      "bytes": 95942,
-      "sha256": "a89f9402b99b40a34f9643cf6f6947cada1ea6976ebad106687fa19e13274f4c",
-      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+      "bytes": 91010,
+      "sha256": "564a0745b8c9e32a4e19d120c9cbac2bfc85366814d1eb3774b57a45960b32ca",
+      "width": 735,
+      "height": 1480,
+      "note": "Web optimizado"
     },
     {
-      "source": "assets/BeeGo_PB05_Lateral_USB_C_Transparente.png",
-      "output": "public/assets/beego-producto-lateral-usbc.webp",
-      "width": 204,
-      "height": 1250,
-      "bytes": 14002,
-      "sha256": "a8e290305b8d1edcd5e5f20b79899d8d4673285611a5edd0abaf0c87a6ccd2a6",
-      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
-    },
-    {
-      "source": "assets/Dispositivo amarillo minimalista en perfil.png",
+      "source": "public/assets/LOTE 2/02_Producto_PB/BeeGo_PB04_Lateral_Boton_Transparente.png",
       "output": "public/assets/beego-producto-lateral-boton.webp",
-      "width": 380,
-      "height": 760,
-      "bytes": 14190,
-      "sha256": "0ee31a1d182b943f9d227761c2fc59de903a48693acd5814f58b2d85be34fcb1",
-      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+      "bytes": 20528,
+      "sha256": "122f58ac70c224dcf86c88fac1f213cadf2d4b8d06ad4635cfaacf52e9f49f3b",
+      "width": 187,
+      "height": 1250,
+      "note": "Web optimizado"
     },
     {
-      "source": "assets/BeeGo_PB06_Contactos_Inferiores_Transparente.png",
+      "source": "public/assets/LOTE 2/02_Producto_PB/BeeGo_PB05_Lateral_USB_C_Transparente.png",
+      "output": "public/assets/beego-producto-lateral-usbc.webp",
+      "bytes": 13218,
+      "sha256": "dbc58a2fa4d6c989e3e48a170ad532a799523ed965c373043dfe36bf88cd472e",
+      "width": 197,
+      "height": 1250,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/02_Producto_PB/BeeGo_PB06_Contactos_Inferiores_Transparente.png",
       "output": "public/assets/beego-producto-contactos.webp",
+      "bytes": 25150,
+      "sha256": "9a03b19cd4609b58c8aa66c9e2ed58ad4d9e35c24670c74855ef767771a3d2be",
       "width": 1250,
-      "height": 342,
-      "bytes": 24670,
-      "sha256": "42722607561d4d2d58db6d9ac3bfd694557d51585c5dc3003e1add20c765b782",
-      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+      "height": 336,
+      "note": "Web optimizado"
     },
     {
-      "source": "assets/BeeGo_IL01_Encontrar_Estacion_Final_Conceptual.png",
+      "source": "public/assets/LOTE 2/05_Ilustraciones_IL/BeeGo_IL01_Encontrar_Estacion_Corregido_Master.png",
       "output": "public/assets/beego-il-encontrar-conceptual.webp",
+      "bytes": 124878,
+      "sha256": "6ee596bb96525c3c291eafbcbbf9caaa808da58b7da02bb0633bc3fb3afc2d54",
       "width": 1000,
       "height": 750,
-      "bytes": 125818,
-      "sha256": "dd089e144a92a5dd79ddddbec409b8441e29978f9cdb51ac13df0ad002f3bff3",
-      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+      "note": "Conceptual"
     },
     {
-      "source": "assets/BeeGo_IL02_Retirar_Bateria_Web.webp",
+      "source": "public/assets/LOTE 2/05_Ilustraciones_IL/BeeGo_IL02_Retirar_Bateria_Master.png",
       "output": "public/assets/beego-il-retirar-conceptual.webp",
+      "bytes": 101876,
+      "sha256": "21c7e9ed26ed3b943a6af3461fdf59ed585b9c6b751df1816a2211b41fe75f92",
       "width": 1000,
       "height": 750,
-      "bytes": 94774,
-      "sha256": "00ce2f8614286d223b0bca4d5799594853da1098e81e91e00a3c38667e30107e",
-      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+      "note": "Conceptual"
     },
     {
-      "source": "assets/Mujer devolviendo batería BeeGo.png",
+      "source": "public/assets/LOTE 2/05_Ilustraciones_IL/BeeGo_IL03_Devolver_Bateria_Final_Transparente.png",
       "output": "public/assets/beego-il-devolver-conceptual.webp",
+      "bytes": 96224,
+      "sha256": "965ef28f695598a1eebff4b230bf07c117275b3fc4431ef2b2b3691c552b6031",
       "width": 1000,
       "height": 752,
-      "bytes": 119484,
-      "sha256": "89583597f179cedf1407cfe4f148d5932910c7b36e90a474715d55e62e1e829b",
-      "status": "staging; requiere aprobación editorial para lanzamiento comercial"
+      "note": "Conceptual"
     },
     {
-      "source": "assets/Power Bank Amarillo con Cables Integrados.png",
+      "source": "public/assets/LOTE 2/03_Fotografia_FT/Power Bank BeeGo en Plaza Urbana.png",
+      "output": "public/assets/beego-ft01-urbana.webp",
+      "bytes": 83478,
+      "sha256": "41864b04fc87298339dc3b88c56c6b6e85af05d1c16fcd8f53059d26c06f5617",
+      "width": 1450,
+      "height": 816,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/03_Fotografia_FT/Power Bank BeeGo en Plaza Urbana.png",
+      "output": "public/assets/beego-ft01-urbana-small.webp",
+      "bytes": 37560,
+      "sha256": "3d6c93131dada11a1f29c3f136ebccd892cd717287a1a5c19c40f71ac64d6fb4",
+      "width": 780,
+      "height": 439,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/03_Fotografia_FT/Power Bank en Cafetería Acogedora.png",
+      "output": "public/assets/beego-ft02-cafeteria.webp",
+      "bytes": 62686,
+      "sha256": "ed05525df1e90dc6fdb46fdf573340ab96f81135a6a333851df84cdac0630398",
+      "width": 900,
+      "height": 720,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/03_Fotografia_FT/Power Bank BeeGo en Centro Comercial.png",
+      "output": "public/assets/beego-ft03-comercial.webp",
+      "bytes": 60124,
+      "sha256": "086f66286f09c528cc82d7290e0efa445cc3b182d6157f76731e82cbb0c1600d",
+      "width": 1000,
+      "height": 563,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/03_Fotografia_FT/BeeGo_FT04_Evento_Conceptual.png",
+      "output": "public/assets/beego-ft04-evento.webp",
+      "bytes": 49796,
+      "sha256": "27e8506ec9b2630e6a4ebf757ec20f44d19887c3503f31a0837faa11c5c02592",
+      "width": 1000,
+      "height": 563,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/03_Fotografia_FT/Mujer con power bank BeeGo en la ciudad.png",
+      "output": "public/assets/beego-ft05-ciudad.webp",
+      "bytes": 76034,
+      "sha256": "d5a2956bc8f210d3fc580543a19219c975794f50fff668c5fd4ecc5b9b134752",
+      "width": 750,
+      "height": 937,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/03_Fotografia_FT/Mujer con power bank BeeGo en hotel.png",
+      "output": "public/assets/beego-ft06-hotel.webp",
+      "bytes": 89366,
+      "sha256": "32ce295ea92e0a56188119a4a12c57676ebf32fce348e6858d19308ad9cd1176",
+      "width": 1050,
+      "height": 788,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/03_Fotografia_FT/BeeGo_FT07_Sala_de_Espera_Master.png",
+      "output": "public/assets/beego-ft07-espera.webp",
+      "bytes": 69494,
+      "sha256": "33f614c2d9f669e749d43ca3a8836a3d6b8f29b102a80be3de3af4eec8a6546d",
+      "width": 1100,
+      "height": 619,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/04_Estaciones_ES/BeeGo_ES01_Estacion_Bajie_Blanca_Conceptual_v3.png",
+      "output": "public/assets/beego-es01-estacion-conceptual.webp",
+      "bytes": 82564,
+      "sha256": "cbab2a62dbceff5e1f333e902038b64d936f926e5a11a6bda8fd07a7223ceff6",
+      "width": 689,
+      "height": 850,
+      "note": "Conceptual"
+    },
+    {
+      "source": "public/assets/LOTE 2/04_Estaciones_ES/Estación BeeGo en café moderno.png",
+      "output": "public/assets/beego-es02-cafe-conceptual.webp",
+      "bytes": 106040,
+      "sha256": "80e0b24cbf10f986fbe8a542a36fce82bd682187303661b3713dcafe0bcbde4d",
+      "width": 1320,
+      "height": 743,
+      "note": "Conceptual"
+    },
+    {
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BG04_BeeGo_Fondo_Oscuro_Panel_Amarillo_Master.png",
+      "output": "public/assets/beego-logo-panel.webp",
+      "bytes": 9274,
+      "sha256": "2e4aba032a42aac4f63c45e9313a1666f8835441de599f8139097fe75cc83582",
+      "width": 380,
+      "height": 307,
+      "note": "Web optimizado"
+    },
+    {
+      "source": "public/assets/LOTE 2/02_Producto_PB/BeeGo_PB03_Vista_Posterior_Cables_Integrados.png",
       "output": "public/assets/beego-producto-cables-posteriores.webp",
+      "bytes": 25344,
+      "sha256": "6fd2d3cfdc3298594dcd14644f86162a22323e632ef3b4b22c9ececf0267ca1a",
       "width": 730,
-      "height": 408,
-      "bytes": 24944,
-      "sha256": "226b7f0b6f5765b0326b749dd5efb5c26fd05fac43fb84dc6ac36c39322e0af2",
-      "status": "vista parcial de cables; crop excluye especificaciones y sellos no validados"
+      "height": 499,
+      "note": "Recorte inferior: excluye sellos y potencias no verificados"
     },
     {
-      "source": "assets/BeeGo_OG01_Inicio_1200x630.png",
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BeeGo_BG01_Logo_Oficial_Color_Fondo_Transparente.png",
+      "output": "public/assets/beego-logo-oficial.png",
+      "bytes": 83883,
+      "sha256": "cbbc218cf674fce67406ee71d3f2b75a5b6fa256b1cacb8d019929e37363c820",
+      "width": 473,
+      "height": 380,
+      "note": "Logotipo oficial, arte escalado"
+    },
+    {
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BeeGo_BG02_Logotipo_Monocromatico_Negro_Oficial.png",
+      "output": "public/assets/beego-logo-monocromo.png",
+      "bytes": 24813,
+      "sha256": "2d6b639a326a8035f97e3057fae98938a2eb83467a79003e1bf64532f83c8e73",
+      "width": 473,
+      "height": 380,
+      "note": "Logotipo oficial, arte escalado"
+    },
+    {
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BG03_Isotipo_Oficial_1024_Transparente.png",
+      "output": "public/assets/beego-isotipo-512.png",
+      "bytes": 91495,
+      "sha256": "76722d91739af68aef7debd7b3d7f7c01bafdc93d560f503fecbc3942d5152d2",
+      "width": 512,
+      "height": 512,
+      "note": "Logotipo oficial, arte escalado"
+    },
+    {
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BG03_Isotipo_Oficial_1024_Transparente.png",
+      "output": "public/assets/beego-apple-touch-180.png",
+      "bytes": 15089,
+      "sha256": "fd68cec501465028ba7f79c0fe1ec2805242a23fa43fc3d849dba96e9b1db5a1",
+      "width": 180,
+      "height": 180,
+      "note": "Logotipo oficial, arte escalado"
+    },
+    {
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BG03_Isotipo_Oficial_1024_Transparente.png",
+      "output": "public/assets/beego-favicon-48.png",
+      "bytes": 2396,
+      "sha256": "b2b2f65abc17e1ddaf402a8eacac4b0719bd69f85882c08e5b491695db141855",
+      "width": 48,
+      "height": 48,
+      "note": "Logotipo oficial, arte escalado"
+    },
+    {
+      "source": "public/assets/LOTE 2/05_Ilustraciones_IL/IL04_Requisitos_Instalacion_Desktop.webp",
+      "output": "public/assets/beego-requisitos-desktop.webp",
+      "bytes": 57476,
+      "sha256": "b274280349d69c4c952007474d977e85ad9c1498c19663810d2ee5a8e62847ee",
+      "width": 1600,
+      "height": 920,
+      "note": "Requisitos ilustrativos de instalación B2B"
+    },
+    {
+      "source": "public/assets/LOTE 2/05_Ilustraciones_IL/IL04_Requisitos_Instalacion_Movil.webp",
+      "output": "public/assets/beego-requisitos-mobile.webp",
+      "bytes": 59428,
+      "sha256": "44d36a81ffa9c74448744ae5d5f00170d4f5941ee7bb270efa7626452a578d9a",
+      "width": 960,
+      "height": 2220,
+      "note": "Requisitos ilustrativos de instalación B2B"
+    },
+    {
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BG06_conexiones_desktop.svg",
+      "output": "public/assets/beego-conexiones-desktop.svg",
+      "bytes": 13821,
+      "sha256": "f7050538d9912c4eba3e1fa5b8e48bfe4adca1f7badfc807fc5bbee373a990a8",
+      "width": null,
+      "height": null,
+      "note": "Decoración abstracta sin ubicaciones reales"
+    },
+    {
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BG06_conexiones_movil.svg",
+      "output": "public/assets/beego-conexiones-mobile.svg",
+      "bytes": 5352,
+      "sha256": "23fc0dab687f0c2104cd538736cd282d609a6e7979cab3e7d79826bea2855f95",
+      "width": null,
+      "height": null,
+      "note": "Decoración abstracta sin ubicaciones reales"
+    },
+    {
+      "source": "public/assets/LOTE 2/06_Iconografia_IC/IC01_bateria_currentColor.svg",
+      "output": "public/assets/beego-icon-bateria.svg",
+      "bytes": 412,
+      "sha256": "e5266dee4b3cde2cf2526df644ebbeaab7c4257819d75dd5c586026c89c68198",
+      "width": null,
+      "height": null,
+      "note": "SVG lineal 24×24"
+    },
+    {
+      "source": "public/assets/LOTE 2/06_Iconografia_IC/IC02_ubicacion_currentColor.svg",
+      "output": "public/assets/beego-icon-ubicacion.svg",
+      "bytes": 389,
+      "sha256": "e3b30a50e77b61b8b8adedceaf610732031650039863c3842342176380bdb7cd",
+      "width": null,
+      "height": null,
+      "note": "SVG lineal 24×24"
+    },
+    {
+      "source": "public/assets/LOTE 2/06_Iconografia_IC/IC03_pago_currentColor.svg",
+      "output": "public/assets/beego-icon-pago.svg",
+      "bytes": 391,
+      "sha256": "2d148070d75f2d19d4d31cc827b18537cc64803ed50375f9b178493f6be602d4",
+      "width": null,
+      "height": null,
+      "note": "SVG lineal 24×24"
+    },
+    {
+      "source": "public/assets/LOTE 2/06_Iconografia_IC/IC04_retiro_currentColor.svg",
+      "output": "public/assets/beego-icon-retiro.svg",
+      "bytes": 465,
+      "sha256": "dc2ffff62fb3c08e88c20238c73b6882dc8ef0e0beb3caca5027e11b28db10c2",
+      "width": null,
+      "height": null,
+      "note": "SVG lineal 24×24"
+    },
+    {
+      "source": "public/assets/LOTE 2/06_Iconografia_IC/IC05_devolucion_currentColor.svg",
+      "output": "public/assets/beego-icon-devolucion.svg",
+      "bytes": 464,
+      "sha256": "d92438085dc560f84ac9ab86d760c52dbea068eaf518fd487b8d27628695585d",
+      "width": null,
+      "height": null,
+      "note": "SVG lineal 24×24"
+    },
+    {
+      "source": "public/assets/LOTE 2/06_Iconografia_IC/IC06_ayuda_currentColor.svg",
+      "output": "public/assets/beego-icon-ayuda.svg",
+      "bytes": 532,
+      "sha256": "6548be47cb9eb96c0777ff066e6cbadb7e8366f3d2d30ac3610dfdd1dd042f07",
+      "width": null,
+      "height": null,
+      "note": "SVG lineal 24×24"
+    },
+    {
+      "source": "public/assets/LOTE 2/07_Redes_OG/BeeGo_OG01_Inicio_1200x630.png",
       "output": "public/assets/beego-og-inicio.png",
-      "width": 1200,
-      "height": 630,
       "bytes": 290030,
       "sha256": "b3ebb7f8467a9980da685a8d4cb46640113130063e64726149f61035d54a6628",
-      "status": "vista previa de entorno preoperativo"
+      "width": 1200,
+      "height": 630,
+      "note": "Social 1200×630"
     },
     {
-      "source": "assets/BG05_franjas_dobles_amarillo.svg",
+      "source": "public/assets/LOTE 2/07_Redes_OG/BeeGo_OG02_Para_Negocios_1200x630.png",
+      "output": "public/assets/beego-og-negocios.png",
+      "bytes": 709563,
+      "sha256": "c9a86654254ccd48982f2f59bc13db58fb4d3361d20f29b4ba6f2e63be631d6c",
+      "width": 1200,
+      "height": 630,
+      "note": "Social 1200×630"
+    },
+    {
+      "source": "public/assets/LOTE 2/07_Redes_OG/BeeGo_OG03_Conoce_Tu_BeeGo_1200x630.png",
+      "output": "public/assets/beego-og-producto.png",
+      "bytes": 721313,
+      "sha256": "4403a2630143e61ce146ca23ee49d9706602663b5be554356b41685ea55c7c3d",
+      "width": 1200,
+      "height": 630,
+      "note": "Social 1200×630"
+    },
+    {
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BG05_franjas_dobles_amarillo.svg",
       "output": "public/assets/beego-franjas-amarillo.svg",
       "bytes": 294,
-      "status": "decorativo; no confundir con el archivo vectorial oficial del logotipo"
+      "sha256": "f53daeb57cbda165165d7c522b4dea15a209910a4f43a695a7aa37053163057a",
+      "width": null,
+      "height": null,
+      "note": "Franjas dobles oficiales"
     },
     {
-      "source": "assets/BG05_franjas_dobles_blanco.svg",
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BG05_franjas_dobles_blanco.svg",
       "output": "public/assets/beego-franjas-blanco.svg",
       "bytes": 294,
-      "status": "decorativo; no confundir con el archivo vectorial oficial del logotipo"
+      "sha256": "18f762d0f44cbd26446cda4468cb1fe713dd2877c3021a5b0b3c66bc3bad3f92",
+      "width": null,
+      "height": null,
+      "note": "Franjas dobles oficiales"
     },
     {
-      "source": "assets/BG05_franjas_dobles_negro.svg",
+      "source": "public/assets/LOTE 2/01_Identidad_BG/BG05_franjas_dobles_negro.svg",
       "output": "public/assets/beego-franjas-negro.svg",
       "bytes": 294,
-      "status": "decorativo; no confundir con el archivo vectorial oficial del logotipo"
+      "sha256": "2e178fa879c634312b1f03fc2a4e75970e3ee777bfc56f207e380f52b5e66818",
+      "width": null,
+      "height": null,
+      "note": "Franjas dobles oficiales"
     }
   ]
 }
