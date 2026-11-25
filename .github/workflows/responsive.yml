@@ -1,0 +1,47 @@
+name: Validación visual responsiva BeeGo
+on:
+  push:
+    branches: [develop]
+    paths:
+      - "src/**"
+      - "public/assets/**"
+      - "scripts/responsive-smoke.mjs"
+      - ".github/workflows/responsive.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.23.4"
+      - name: Instalar Astro y Playwright
+        run: |
+          npm install --no-audit --no-fund
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+          npx playwright install --with-deps chromium webkit firefox
+      - name: Compilar sitio
+        run: npm run build
+      - name: Abrir servidor de pruebas
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4321 > /tmp/beego-preview.log 2>&1 &
+          for i in $(seq 1 45); do
+            if curl -fsS http://127.0.0.1:4321/ -o /dev/null; then exit 0; fi
+            sleep 2
+          done
+          cat /tmp/beego-preview.log
+          exit 1
+      - name: Evaluar 320 a 3840 px y Chromium, WebKit, Firefox
+        run: node scripts/responsive-smoke.mjs
+      - name: Guardar capturas para revisión humana
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: beego-responsive-screenshots
+          path: qa/screenshots/
+          if-no-files-found: ignore
+          retention-days: 14
