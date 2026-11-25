@@ -490,3 +490,23 @@ button,summary,a{touch-action:manipulation}
   .how-guide .how-step__condition-icon img{width:27px;height:27px}
   .how-guide .how-step__condition>div>span{font-size:.81rem}
 }
+
+/* La foto original FT02 tiene relación 5:4.
+   Conservarla evita cortes de cabeza/producto en la etapa 04. */
+.how-guide .how-step__image--photo{
+  width:min(100%,450px);
+  max-width:100%;
+  background:transparent;
+  aspect-ratio:auto;
+  justify-self:center;
+  margin-inline:auto;
+}
+.how-guide .how-step__image--photo img{
+  width:100%;
+  height:auto;
+  aspect-ratio:5/4;
+  max-height:none;
+  object-fit:cover;
+  object-position:center;
+  border-radius:16px;
+}
