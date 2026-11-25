@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const steps=[
-  ["01","Encuentra una estación","Busca una ubicación BeeGo y consulta las indicaciones de acceso.","beego-il-encontrar-conceptual.webp"],
-  ["02","Escanea y consulta","Revisa la información de la estación, el precio y las condiciones antes de continuar.",null],
-  ["03","Autoriza y retira","Sigue las instrucciones para autorizar la renta y retirar la batería.","beego-il-retirar-conceptual.webp"],
-  ["04","Lleva energía contigo","Conecta tu dispositivo compatible y continúa disfrutando de tu día.","beego-hero.webp"],
-  ["05","Devuelve y confirma","Regresa la batería a una estación habilitada y verifica que la devolución quede registrada.","beego-il-devolver-conceptual.webp"]
+  {num:"01",title:"Encuentra una estación",description:"Busca una ubicación BeeGo y consulta las indicaciones de acceso.",image:"beego-il-encontrar-conceptual.webp",width:1000,height:750,alt:"Ilustración del uso del celular para consultar una estación BeeGo.",illustration:true},
+  {num:"02",title:"Escanea y consulta",description:"Revisa la información de la estación, el precio y las condiciones antes de continuar.",icon:"beego-icon-pago.svg"},
+  {num:"03",title:"Autoriza y retira",description:"Sigue las instrucciones para autorizar la renta y retirar la batería.",image:"beego-il-retirar-conceptual.webp",width:1000,height:750,alt:"Ilustración de una persona retirando su batería BeeGo.",illustration:true},
+  {num:"04",title:"Lleva energía contigo",description:"Conecta tu dispositivo compatible y continúa disfrutando de tu día.",image:"beego-ft02-cafeteria.webp",width:900,height:720,alt:"Escena de cafetería con batería BeeGo y una persona utilizando su celular."},
+  {num:"05",title:"Devuelve y confirma",description:"Regresa la batería a una estación habilitada y verifica que la devolución quede registrada.",image:"beego-il-devolver-conceptual.webp",width:1000,height:752,alt:"Ilustración de una persona devolviendo una batería a una estación BeeGo.",illustration:true}
 ];
 ---
 <BaseLayout title="Cómo funciona" description="Descubre cómo encontrar, retirar, utilizar y devolver una batería portátil BeeGo.">
@@ -18,12 +18,14 @@ const steps=[
     <div class="container">
       <img class="section-stripes" src="/assets/beego-franjas-negro.svg" width="400" height="48" alt="" aria-hidden="true" loading="lazy"/>
       <div class="how-steps">
-        {steps.map(([num,title,desc,img])=><article class="how-step">
-          <div><span class="how-step__number">{num}</span><h2>{title}</h2><p>{desc}</p></div>
-          {img?<figure>
-            <img src={"/assets/"+img} alt={img==="beego-il-encontrar-conceptual.webp"?"Ilustración de búsqueda de una estación desde un teléfono móvil.":"Ilustración del paso "+title+" de BeeGo."} width={img==="beego-hero.webp"?1050:1000} height={img==="beego-hero.webp"?1341:img==="beego-il-retirar-conceptual.webp"||img==="beego-il-encontrar-conceptual.webp"?750:752} loading="lazy" decoding="async"/>
-            {img!=="beego-hero.webp"&&<figcaption>Imagen ilustrativa.</figcaption>}
-          </figure>:<div class="how-step__abstract" aria-hidden="true">{num}</div>}
+        {steps.map(step=><article class="how-step">
+          <div><span class="how-step__number">{step.num}</span><h2>{step.title}</h2><p>{step.description}</p></div>
+          {step.image
+            ? <figure class:list={["how-step__image",{"how-step__image--photo":!step.illustration}]}>
+                <img src={"/assets/"+step.image} width={step.width} height={step.height} alt={step.alt} loading="lazy" decoding="async"/>
+                {step.illustration&&<figcaption>Imagen ilustrativa.</figcaption>}
+              </figure>
+            : <div class="how-step__symbol" aria-hidden="true"><img src={"/assets/"+step.icon} width="96" height="96" alt=""/></div>}
         </article>)}
       </div>
     </div>

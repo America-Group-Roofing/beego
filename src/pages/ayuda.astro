@@ -22,6 +22,11 @@ const questions=[
     <div class="container">
       <p class="eyebrow">INFORMACIÓN ÚTIL</p>
       <h2 id="preguntas">Preguntas frecuentes</h2>
+      <div class="help-highlights">
+        <a href="/como-funciona/"><img src="/assets/beego-icon-bateria.svg" width="24" height="24" alt="" aria-hidden="true"/><span>Uso de la batería</span></a>
+        <a href="/estaciones/"><img src="/assets/beego-icon-ubicacion.svg" width="24" height="24" alt="" aria-hidden="true"/><span>Encontrar una estación</span></a>
+        <a href="#preguntas"><img src="/assets/beego-icon-ayuda.svg" width="24" height="24" alt="" aria-hidden="true"/><span>Preguntas frecuentes</span></a>
+      </div>
       <div class="faq-list">
         {questions.map(q=><details class="faq-item">
           <summary>{q.title}</summary>

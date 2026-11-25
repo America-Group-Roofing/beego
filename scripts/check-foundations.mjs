@@ -29,6 +29,16 @@ for (const name of [
 ]) assert.ok(exists("public/assets/" + name), "Asset faltante " + name);
 assert.ok(home.includes("beego-il-encontrar-conceptual.webp"), "Imagen IL01 debe estar en H03");
 assert.ok(product.includes("beego-producto-cables-posteriores.webp"), "Falta PB03");
+assert.ok(read("src/components/Header.astro").includes("beego-logo-oficial.png"), "El logo oficial debe figurar en la cabecera");
+assert.ok(read("src/pages/negocios.astro").includes("beego-og-negocios.png"), "OG02 debe figurar en negocios");
+assert.ok(product.includes("beego-og-producto.png"), "OG03 debe figurar en producto");
+for(const name of [
+"beego-logo-oficial.png","beego-favicon-48.png","beego-ft01-urbana.webp",
+"beego-ft02-cafeteria.webp","beego-ft03-comercial.webp","beego-ft04-evento.webp",
+"beego-ft05-ciudad.webp","beego-ft06-hotel.webp","beego-ft07-espera.webp",
+"beego-es02-cafe-conceptual.webp","beego-requisitos-desktop.webp",
+"beego-requisitos-mobile.webp","beego-og-negocios.png","beego-og-producto.png"
+]) assert.ok(exists("public/assets/"+name),"Falta LOTE 2 derivado: "+name);
 const forbidden = [
   /vista de desarrollo/i, /entorno de pruebas/i, /etapa preoperativa/i,
   /sitio en desarrollo/i, /diseño de referencia/i, /especificaciones técnicas por validar/i,

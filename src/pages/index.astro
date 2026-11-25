@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const scenes=[
+ {number:"01",title:"Cafeterías",description:"Aprovecha tu tiempo y sigue conectado.",image:"beego-ft02-cafeteria.webp",width:900,height:720,alt:"Batería BeeGo junto a una persona que consulta su teléfono en una cafetería."},
+ {number:"02",title:"Plazas",description:"La energía también va de compras.",image:"beego-ft03-comercial.webp",width:1000,height:563,alt:"Persona con una batería portátil BeeGo en un centro comercial."},
+ {number:"03",title:"Eventos",description:"Disfruta cada momento.",image:"beego-ft04-evento.webp",width:1000,height:563,alt:"Escena de evento con una persona mostrando su batería BeeGo."},
+ {number:"04",title:"En movimiento",description:"Lleva tus planes un poco más lejos.",image:"beego-ft05-ciudad.webp",width:750,height:937,alt:"Persona caminando por la ciudad con una batería BeeGo y un teléfono."}
+];
 ---
 <BaseLayout title="Energía que va contigo" description="Descubre BeeGo: energía portátil para acompañar tus actividades. Conoce cómo funciona, el producto y las opciones para negocios.">
   <section class="hero" aria-labelledby="hero-titulo">
@@ -16,20 +22,33 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
       <figure class="hero-visual">
         <div class="hero-halo" aria-hidden="true"></div>
-        <img src="/assets/beego-hero.webp" alt="Render ilustrativo de una batería portátil BeeGo amarilla, con abeja negra, indicadores y señal RETURN." width="1050" height="1341" fetchpriority="high" decoding="async"/>
-        
+        <picture>
+          <source media="(max-width: 600px)" srcset="/assets/beego-hero-mobile.webp"/>
+          <img src="/assets/beego-hero.webp" alt="Batería portátil BeeGo amarilla, con abeja negra, rayo, indicadores y señal RETURN." width="599" height="1321" fetchpriority="high" decoding="async"/>
+        </picture>
       </figure>
     </div>
     <img class="hero-stripes" src="/assets/beego-franjas-amarillo.svg" alt="" width="400" height="48" aria-hidden="true"/>
   </section>
-  <section class="section" aria-labelledby="h02">
-    <div class="container split-section">
-      <div><p class="eyebrow">01 / LIBERTAD DE MOVIMIENTO</p><h2 id="h02">Tu día no se detiene.</h2>
 
+  <section class="section section--benefit" aria-labelledby="h02">
+    <div class="container benefit-grid">
+      <figure class="benefit-photo">
+        <picture>
+          <source media="(max-width: 650px)" srcset="/assets/beego-ft01-urbana-small.webp"/>
+          <img src="/assets/beego-ft01-urbana.webp" alt="Una persona disfruta su día en un entorno urbano con un celular y una batería BeeGo." width="1450" height="816" loading="lazy" decoding="async"/>
+        </picture>
+        <figcaption>Imagen ilustrativa.</figcaption>
+      </figure>
+      <div class="benefit-copy">
+        <p class="eyebrow">01 / LIBERTAD DE MOVIMIENTO</p>
+        <h2 id="h02">Tu día no se detiene.</h2>
+        <p class="lead">La energía portátil está pensada para acompañar tus planes, no interrumpirlos.</p>
+        <p>En una cafetería, por la ciudad o en tu siguiente destino, BeeGo es energía para seguir en movimiento.</p>
       </div>
-      <div><p class="lead">La energía portátil está pensada para acompañar tus planes, no interrumpirlos.</p><p>Con BeeGo, la energía acompaña tus planes para que sigas conectado sin quedarte junto a un enchufe.</p></div>
     </div>
   </section>
+
   <section class="section section--soft" aria-labelledby="h03">
     <div class="container">
       <p class="eyebrow">02 / EL RECORRIDO</p>
@@ -39,19 +58,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="steps steps--visual">
         <article class="step-card">
           <span class="step-id">01 · ENCUENTRA</span>
-          <figure class="step-art"><img src="/assets/beego-il-encontrar-conceptual.webp" alt="Escena conceptual de una mujer mirando un mapa ilustrativo con un marcador BeeGo; no representa estaciones reales." width="1000" height="750" loading="lazy" decoding="async"/></figure>
+          <figure class="step-art"><img src="/assets/beego-il-encontrar-conceptual.webp" alt="Ilustración de una persona localizando una estación BeeGo desde su celular." width="1000" height="750" loading="lazy" decoding="async"/></figure>
           <h3>Encuentra</h3><p>Consulta las estaciones BeeGo disponibles en tu zona.</p>
           <small class="disclaimer">Imagen ilustrativa.</small>
         </article>
         <article class="step-card">
           <span class="step-id">02 · RETIRA</span>
-          <figure class="step-art"><img src="/assets/beego-il-retirar-conceptual.webp" alt="Ilustración conceptual de una mujer con una batería BeeGo junto a una estación de referencia." width="1000" height="750" loading="lazy" decoding="async"/></figure>
+          <figure class="step-art"><img src="/assets/beego-il-retirar-conceptual.webp" alt="Ilustración del proceso de retiro de una batería portátil BeeGo." width="1000" height="750" loading="lazy" decoding="async"/></figure>
           <h3>Retira</h3><p>Consulta las condiciones, autoriza y retira una batería.</p>
           <small class="disclaimer">Imagen ilustrativa.</small>
         </article>
         <article class="step-card">
           <span class="step-id">03 · DEVUELVE</span>
-          <figure class="step-art"><img src="/assets/beego-il-devolver-conceptual.webp" alt="Representación conceptual de una mujer devolviendo una batería a un equipo BeeGo de referencia." width="1000" height="752" loading="lazy" decoding="async"/></figure>
+          <figure class="step-art"><img src="/assets/beego-il-devolver-conceptual.webp" alt="Ilustración de una persona devolviendo una batería a una estación BeeGo." width="1000" height="752" loading="lazy" decoding="async"/></figure>
           <h3>Devuelve</h3><p>Entrega la batería en una estación compatible y confirma la devolución.</p>
           <small class="disclaimer">Imagen ilustrativa.</small>
         </article>
@@ -59,31 +78,65 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <a class="text-link" href="/como-funciona/">Explorar los cinco pasos del servicio <span aria-hidden="true">↗</span></a>
     </div>
   </section>
+
   <section class="section" aria-labelledby="h04">
     <div class="container product-feature">
-      <div class="product-feature__image"><img src="/assets/beego-producto-frontal.webp" alt="Vista frontal ilustrativa del power bank BeeGo amarillo, con rayo, abeja e indicadores inferiores." width="740" height="1477" loading="lazy" decoding="async"/></div>
-      <div><p class="eyebrow">03 / DISEÑO DE PRODUCTO</p><h2 id="h04">Conoce tu BeeGo.</h2><p>La batería amarilla de BeeGo combina una forma compacta con una identidad gráfica inconfundible.</p><p>Explora el diseño de la batería BeeGo desde distintos ángulos y conoce sus detalles.</p><a class="button button--dark" href="/bateria-beego/">Explorar el producto</a></div>
+      <div class="product-feature__image">
+        <img src="/assets/beego-producto-frontal.webp" alt="Vista frontal del power bank amarillo BeeGo con el símbolo de la abeja." width="735" height="1480" loading="lazy" decoding="async"/>
+      </div>
+      <div>
+        <p class="eyebrow">03 / DISEÑO DE PRODUCTO</p>
+        <h2 id="h04">Conoce tu BeeGo.</h2>
+        <p>La batería amarilla de BeeGo combina una forma compacta con una identidad gráfica inconfundible.</p>
+        <p>Explora su diseño desde distintos ángulos y conoce los detalles de la batería portátil.</p>
+        <a class="button button--dark" href="/bateria-beego/">Explorar el producto</a>
+      </div>
     </div>
   </section>
+
   <section class="section network-section" aria-labelledby="h05">
-    <div class="container split-section">
+    <picture class="network-background" aria-hidden="true">
+      <source media="(max-width: 700px)" srcset="/assets/beego-conexiones-mobile.svg"/>
+      <img src="/assets/beego-conexiones-desktop.svg" alt="" width="1440" height="760" loading="lazy"/>
+    </picture>
+    <div class="container split-section network-content">
       <div><p class="eyebrow eyebrow--yellow">04 / LA RED BEEGO</p><h2 id="h05">La energía sigue tu camino.</h2></div>
-      <div><p>Consulta la red BeeGo en Tijuana y descubre los puntos disponibles, sus ubicaciones y condiciones de acceso.</p><div class="network-graphic" aria-hidden="true"><span></span><span></span><span></span></div><a class="button button--outline" href="/estaciones/">Consultar estaciones</a></div>
+      <div>
+        <p>Consulta la red BeeGo en Tijuana y descubre los puntos disponibles, sus ubicaciones y condiciones de acceso.</p>
+        <a class="button button--outline" href="/estaciones/">Consultar estaciones</a>
+      </div>
     </div>
   </section>
+
   <section class="section" aria-labelledby="h06">
     <div class="container">
       <p class="eyebrow">05 / VIDA COTIDIANA</p><h2 id="h06">Pensado para acompañar tus actividades.</h2>
       <p class="section-intro">Del café a la plaza y de una reunión a tu próximo destino: energía portátil para los momentos que importan.</p>
-      <div class="scenarios"><article><span>01</span><h3>Cafeterías</h3><p>Continúa trabajando o conversando.</p></article><article><span>02</span><h3>Plazas</h3><p>Disfruta de tu recorrido.</p></article><article><span>03</span><h3>Eventos</h3><p>Continúa con tus actividades.</p></article><article><span>04</span><h3>Movilidad</h3><p>Lleva energía durante el día.</p></article></div>
+      <div class="scenarios scenarios--photos">
+        {scenes.map(scene=><article class="scenario">
+          <div class="scenario__photo"><img src={"/assets/"+scene.image} alt={scene.alt} width={scene.width} height={scene.height} loading="lazy" decoding="async"/></div>
+          <div class="scenario__copy"><span>{scene.number}</span><h3>{scene.title}</h3><p>{scene.description}</p></div>
+        </article>)}
+      </div>
+      <p class="editorial-disclaimer">Imágenes ilustrativas de situaciones de uso.</p>
     </div>
   </section>
+
   <section class="section section--yellow" aria-labelledby="h07">
-    <div class="container split-section">
-      <div><p class="eyebrow">06 / BEEGO PARA NEGOCIOS</p><h2 id="h07">Una nueva experiencia para tus visitantes.</h2></div>
-      <div><p>Explora incorporar una estación BeeGo como servicio adicional para tu establecimiento, sujeto a evaluación y condiciones comerciales.</p><a class="button button--dark" href="/negocios/">Explorar la colaboración</a></div>
+    <div class="container business-teaser">
+      <div>
+        <p class="eyebrow">06 / BEEGO PARA NEGOCIOS</p>
+        <h2 id="h07">Una nueva experiencia para tus visitantes.</h2>
+        <p>Explora cómo incorporar energía portátil como una amenidad adicional para tu establecimiento, de acuerdo con sus características y condiciones de operación.</p>
+        <a class="button button--dark" href="/negocios/">Explorar la colaboración</a>
+      </div>
+      <figure>
+        <img src="/assets/beego-es02-cafe-conceptual.webp" width="1320" height="743" alt="Ilustración de una estación BeeGo sobre el mostrador de una cafetería." loading="lazy" decoding="async"/>
+        <figcaption>Imagen ilustrativa.</figcaption>
+      </figure>
     </div>
   </section>
+
   <section class="section section--soft" aria-labelledby="h08">
     <div class="container split-section">
       <div><p class="eyebrow">07 / CONFIANZA Y AYUDA</p><h2 id="h08">¿Tienes preguntas sobre BeeGo?</h2></div>

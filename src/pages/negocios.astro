@@ -1,29 +1,75 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="BeeGo para negocios" description="Descubre BeeGo para establecimientos: una solución de energía portátil compartida para tus visitantes.">
+<BaseLayout title="BeeGo para negocios" description="Descubre BeeGo para establecimientos: una solución de energía portátil compartida para tus visitantes." ogImage="/assets/beego-og-negocios.png">
   <section class="page-heading container business-intro">
     <div>
       <p class="eyebrow">BEEGO PARA NEGOCIOS</p>
       <h1>Una nueva experiencia para tus visitantes.</h1>
       <p class="lead">Ofrece a las personas una alternativa de energía portátil mientras disfrutan de tu establecimiento.</p>
       <p>Descubre cómo BeeGo puede integrarse en cafeterías, restaurantes, plazas, hoteles y otros espacios de atención al público.</p>
+      <a class="button button--dark" href="#colaboracion">Conoce la colaboración</a>
     </div>
     <figure class="business-art">
-      <img src="/assets/beego-il-devolver-conceptual.webp" alt="Ilustración de una persona usando una estación de baterías BeeGo." width="1000" height="752" decoding="async"/>
-      <figcaption>Imagen ilustrativa.</figcaption>
+      <img src="/assets/beego-es02-cafe-conceptual.webp" alt="Estación de baterías BeeGo representada en el mostrador de una cafetería." width="1320" height="743" decoding="async"/>
+      <figcaption>Imagen ilustrativa de instalación.</figcaption>
     </figure>
   </section>
-  <section class="section section--soft">
+  <section class="section section--soft" aria-labelledby="espacios">
+    <div class="container">
+      <p class="eyebrow">SOLUCIONES PARA ESTABLECIMIENTOS</p>
+      <h2 id="espacios">Energía portátil en espacios donde las personas se reúnen.</h2>
+      <div class="business-sectors">
+        <article>
+          <img src="/assets/beego-ft06-hotel.webp" width="1050" height="788" loading="lazy" decoding="async" alt="Persona utilizando una batería BeeGo en una zona de hotel."/>
+          <div><h3>Hoteles y hospitalidad</h3><p>Una amenidad para acompañar la estancia de tus visitantes.</p></div>
+        </article>
+        <article>
+          <img src="/assets/beego-ft07-espera.webp" width="1100" height="619" loading="lazy" decoding="async" alt="Persona utilizando una batería portátil mientras espera en un espacio interior."/>
+          <div><h3>Salas de espera y atención</h3><p>Energía para continuar conectado en momentos de espera.</p></div>
+        </article>
+      </div>
+      <p class="editorial-disclaimer">Fotografías ilustrativas.</p>
+    </div>
+  </section>
+  <section class="section" id="colaboracion" aria-labelledby="modelo">
     <div class="container">
       <p class="eyebrow">COLABORACIÓN CON ESTABLECIMIENTOS</p>
-      <h2>Una solución pensada para cada espacio.</h2>
-      <div class="steps">
+      <h2 id="modelo">Una solución pensada para cada espacio.</h2>
+      <div class="steps business-steps">
         <article><span class="step-id">01 / CONTACTO</span><h3>Conozcamos tu negocio</h3><p>Comparte el tipo de establecimiento y su ubicación.</p></article>
         <article><span class="step-id">02 / EVALUACIÓN</span><h3>Revisamos el espacio</h3><p>Consideramos el acceso, la ubicación y las necesidades del lugar.</p></article>
         <article><span class="step-id">03 / PROPUESTA</span><h3>Exploramos la colaboración</h3><p>Definimos una alternativa según las características del establecimiento.</p></article>
       </div>
       <p>La instalación y las condiciones comerciales dependen de la evaluación de cada ubicación.</p>
+    </div>
+  </section>
+  <section class="section section--soft" aria-labelledby="requisitos">
+    <div class="container requirements-grid">
+      <div>
+        <p class="eyebrow">CADA UBICACIÓN ES DIFERENTE</p>
+        <h2 id="requisitos">¿Qué valoramos para una estación BeeGo?</h2>
+        <p>Un espacio apropiado, acceso a energía eléctrica, conectividad y condiciones de operación adecuadas para los visitantes.</p>
+        <p>Estos aspectos se revisan de acuerdo con el establecimiento y el equipo propuesto.</p>
+      </div>
+      <picture class="requirements-picture">
+        <source media="(max-width: 700px)" srcset="/assets/beego-requisitos-mobile.webp"/>
+        <img src="/assets/beego-requisitos-desktop.webp" alt="Esquema ilustrativo de ubicación, electricidad, conectividad y circulación para integrar una estación." width="1600" height="920" loading="lazy" decoding="async"/>
+      </picture>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="equipo">
+    <div class="container equipment-grid">
+      <figure>
+        <img src="/assets/beego-es01-estacion-conceptual.webp" alt="Representación de diseño de una estación de baterías BeeGo." width="689" height="850" loading="lazy" decoding="async"/>
+        <figcaption>Imagen ilustrativa del equipo.</figcaption>
+      </figure>
+      <div>
+        <p class="eyebrow">ESTACIÓN BEEGO</p>
+        <h2 id="equipo">Diseñada para integrarse a la experiencia del lugar.</h2>
+        <p>Conoce cómo una estación de energía portátil puede complementar la atención a tus clientes y visitantes.</p>
+        <a class="text-link" href="/como-funciona/">Descubre cómo funciona <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </section>
 </BaseLayout>
